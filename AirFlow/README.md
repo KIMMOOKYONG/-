@@ -25,9 +25,6 @@
 # DB 초기화, sqlite
 !airflow db init
 
-![image](https://user-images.githubusercontent.com/102650331/168996739-17eb19ea-3cdb-4e68-9684-6e267528d7d1.png)
-
-
 # 사용자 등록
 !airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
 
@@ -41,6 +38,9 @@
 !npx localtunnel --port 9090
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/168996739-17eb19ea-3cdb-4e68-9684-6e267528d7d1.png)
+
 
 # Using Airflow with Python
 - Defining the DAG(default_args)
