@@ -150,3 +150,14 @@ airflow webserver
 
 ```
 
+# 참고 사이트
+```
+https://zzsza.github.io/data/2018/01/04/airflow-1/
+https://towardsdatascience.com/job-scheduling-with-apache-airflow-2-0-in-10-minutes-16d19f548a46
+https://velog.io/@ifelifelse/Airflow
+https://airflow-tutorial.readthedocs.io/en/latest/index.html
+https://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/
+https://towardsdatascience.com/apache-airflow-547339588c29
+https://dydwnsekd.tistory.com/76
+
+```
