@@ -16,3 +16,7 @@
 - 태스크는 일반적으로 sensor > operator 순서로 실행된다.
 - 태스크는 Directed Acyclic Graph (DAG)로 연결되어 워크플로우를 구성한다.
 
+# Installing Airflow
+```
+!pip install tpot
+```
