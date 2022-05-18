@@ -41,6 +41,8 @@
 
 ![image](https://user-images.githubusercontent.com/102650331/168996739-17eb19ea-3cdb-4e68-9684-6e267528d7d1.png)
 
+![image](https://user-images.githubusercontent.com/102650331/168997153-4f9530cf-312a-4e89-a244-cf19b958623c.png)
+
 
 # Using Airflow with Python
 - Defining the DAG(default_args)
