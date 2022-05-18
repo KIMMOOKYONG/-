@@ -124,7 +124,8 @@ job_1_operator >> job_2_sensor >> job_2_operator
 !python dag.py
 
 # 작업 등록
-cp dags_folder/dag.py /home/kayjan/airflow/dags/
+mkdir /root/airflow/dags
+cp dag.py /root/airflow/dags/
 
 ```
 
