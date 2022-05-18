@@ -16,7 +16,26 @@
 - 태스크는 일반적으로 sensor > operator 순서로 실행된다.
 - 태스크는 Directed Acyclic Graph (DAG)로 연결되어 워크플로우를 구성한다.
 
-# Installing Airflow
+# Installing Airflow# Installing Airflow
 ```
+# 필요 패키지 설치
 !pip install tpot
+!pip install apache-airflow
+
+# DB 초기화, sqlite
+!airflow db init
+
+# 사용자 등록
+!airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
+
+# 스케줄러 백그라운드 실행
+!airflow scheduler &>/dev/null&
+
+# 웹 UI 실행
+!airflow webserver -p 9090 &>/dev/null&
+
+# 터널링 서비스 실행
+!npx localtunnel --port 9090
+
 ```
+
