@@ -66,6 +66,13 @@ m
 ![image](https://user-images.githubusercontent.com/102650331/169255543-1a55fc72-ff02-4735-b88b-820440531a99.png)
 
 
+# 지도 분석 결과 저장하기
+```python
+m.save("map.html")
+
+```
+
+
 # 참조 사이트
 - https://teddylee777.github.io/visualization/folium
 
