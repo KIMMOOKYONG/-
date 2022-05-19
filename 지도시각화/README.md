@@ -65,7 +65,7 @@ m
 
 ![image](https://user-images.githubusercontent.com/102650331/169255543-1a55fc72-ff02-4735-b88b-820440531a99.png)
 
-# 지역별 카페 분포를 범례와 함께 표현하기
+# 지역별 카페 마커 클러스터링
 ```python
 import requests
 import json
