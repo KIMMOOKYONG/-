@@ -83,3 +83,47 @@ vworld_key=FB439F46-E89D-33AE-8F73-C5A41E8EDB9E
 # 참조 사이트
 - https://wooiljeong.github.io/python/folium_tiles/
 - 
+
+
+# VWORLD & 구글맵 배경지도 변경
+```python
+#Foliium 불러오기
+import folium
+# 불러오고자 하는 지역의 중심이 되는 좌표 설정해 주고 이를 map_google로 명명합니다. 
+map_google = folium.Map(location=[37.542130, 126.982402], zoom_start = 10) 
+ 
+# 구글맵 기반의 지도 배경 설정을 해줍니다. 
+basemaps_google = {
+    'Google Maps': folium.TileLayer(
+        tiles = 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+        attr = 'Google',
+        name = 'Google Maps',
+        overlay = True,
+        control = True
+    )}
+ 
+# 위에서 설정한 구글 기반 지도를 map_google에 적용해 줍니다. 
+basemaps_google['Google Maps'].add_to(map_google)
+ 
+#map_google을 실행해 봅니다. 
+map_google
+
+```
+
+```python
+#Vworld 기반의 지도 배경 설정 
+basemaps_vworld = {
+    'VWorldBase': folium.TileLayer(
+        tiles = 'http://api.vworld.kr/req/wmts/1.0.0/KEY/Base/{z}/{y}/{x}.png',
+        attr = 'VWorldBase',
+        name = 'VWorldBase',
+        overlay = True,
+        control = True
+    )}
+ 
+ 
+# 위에서 설정한 Vworld 기반 지도를 map_vworld에 적용해 줍니다.
+basemaps_vworld['VWorldBase'].add_to(map_vworld)
+
+
+```
