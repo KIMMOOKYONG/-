@@ -43,3 +43,26 @@ folium.GeoJson(
 m
 
 ```
+
+# tiles 옵션 변경을 통해 지도의 테마 변경
+```python
+m = folium.Map(
+    location=[37.559819, 126.963895],
+    zoom_start=11, 
+    #tiles="Stamen Toner"
+    tiles="cartodbpositron"
+)
+
+folium.GeoJson(
+    seoul_geo,
+    name="지역구"
+).add_to(m)
+
+m
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169255494-24505b56-1eee-4e25-94ee-ed350b55bbb2.png)
+
+![image](https://user-images.githubusercontent.com/102650331/169255543-1a55fc72-ff02-4735-b88b-820440531a99.png)
+
+
