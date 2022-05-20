@@ -1,12 +1,16 @@
 # StreamIt 시작하기
 ```
-필요 패키지 설치(StreamIt, localtunnel)
-# 데몬 실행
+# STEP1.필요 패키지 설치(StreamIt, localtunnel)
+
+# STEP2.앱 개발
+
+# STEP3.데몬 실행
 !streamlit run app.py &>/dev/null&
-# 터널링
+
+# STEP4.터널링
 !npx localtunnel --port 8501
 
-위 패키지 설정 후 웹 브라우저 접속 테스트
+# STEP5.웹 브라우저 접속 테스트
 
 ```
 
@@ -25,9 +29,27 @@ StreamIt 설치 후 런타임 재시작 필요
 ![image](https://user-images.githubusercontent.com/102650331/169514115-7cea17d6-bb2b-4d64-b1d5-b5cb24b7945e.png)
 
 # 테스트 코드
+```python
+%%writefile app.py
+import streamlit as st
+
+st.title("Streamlit Test")
+st.write("hello world")
+st.write("""
+# MarkDown
+> comment
+- one
+- two
+- three
+""")
+
+```
+
 ```
 # 데몬 실행
 !streamlit run app.py &>/dev/null&
 # 터널링
 !npx localtunnel --port 8501
 ```
+![image](https://user-images.githubusercontent.com/102650331/169514422-94319bfd-d259-46d5-bb4b-260db2f3db93.png)
+
