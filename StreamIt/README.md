@@ -51,7 +51,10 @@ st.write("""
 # 터널링
 !npx localtunnel --port 8501
 ```
+# 터널링
 ![image](https://user-images.githubusercontent.com/102650331/169514422-94319bfd-d259-46d5-bb4b-260db2f3db93.png)
 
+# 웹 브라우저 접속
 ![image](https://user-images.githubusercontent.com/102650331/169515188-fab2b1b4-72ca-4418-a087-47ab69569777.png)
+
 
