@@ -53,6 +53,8 @@ df = pd.DataFrame({
 df
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/169661876-1e74ff8a-7d20-4fe0-8c52-9440c449427b.png)
+
 
 ## Write a data frame
 ```python
