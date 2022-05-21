@@ -92,6 +92,7 @@ dataframe = pd.DataFrame(
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/169662064-959bee73-59c7-4fc9-9b4d-3f8177817214.png)
 
 ```python
 import streamlit as st
@@ -104,3 +105,21 @@ dataframe = pd.DataFrame(
 st.table(dataframe)
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/169662097-63c8102d-6e2e-4d2f-9c30-fc88a9f83722.png)
+
+# Draw a line chart
+```python
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/169662197-798416e3-e3d0-4826-a70a-b9662be7e908.png)
+
