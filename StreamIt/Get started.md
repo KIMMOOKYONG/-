@@ -19,3 +19,15 @@ streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/
 
 ![image](https://user-images.githubusercontent.com/102650331/169661224-c6ca4da4-90d6-4ab7-8edb-b467e1aa0d2c.png)
 
+# Development flow
+```
+소스코드 변경 후 저장하면 Streamlit 프로그램일 자동으로 감지해서 재실행 여부를 묻거나 설정에서 Always rerun 옵션을 선택하면 자동으로 변경되 소스 코드를 반영해주는 기능을 제공한다.
+
+```
+
+# Data flow
+```
+소스 코드 변경시 또는 컴포넌트 이벤트 발생시 소스코드 전체를 재실행
+재실행 시 비용이 많은 부분에 대해서는 @st.cache 사용
+
+```
