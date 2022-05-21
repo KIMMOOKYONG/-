@@ -139,3 +139,10 @@ st.map(map_data)
 ![image](https://user-images.githubusercontent.com/102650331/169662397-a59fe5f8-c7ce-46f0-9102-cdf42926a488.png)
 
 # Widgets
+
+# 참고
+- (Streamlit with Nginx) https://medium.com/featurepreneur/streamlit-with-nginx-bde7a9a41e6c
+- (Nginx를 사용해서 Streamlit 서비스 프록시 패스하기) https://gzupark.dev/blog/Passing-the-Streamlit-service-using-Nginx/
+- (Streamlit) https://intrepidgeeks.com/tags/Streamlit
+- (Streamlit API reference) https://docs.streamlit.io/library/api-reference
+- ()
