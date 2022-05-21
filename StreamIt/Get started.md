@@ -68,6 +68,7 @@ st.write(pd.DataFrame({
 }))
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/169661950-d2a43f5a-70b3-403e-a290-373f685794a3.png)
 
 ```python
 import streamlit as st
