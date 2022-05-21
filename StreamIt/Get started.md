@@ -21,7 +21,8 @@ streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/
 
 # Development flow
 ```
-소스코드 변경 후 저장하면 Streamlit 프로그램일 자동으로 감지해서 재실행 여부를 묻거나 설정에서 Always rerun 옵션을 선택하면 자동으로 변경되 소스 코드를 반영해주는 기능을 제공한다.
+소스코드 변경 후 저장하면 Streamlit 프로그램일 자동으로 감지해서 재실행 여부를 묻거나 
+설정에서 Always rerun 옵션을 선택하면 자동으로 변경되 소스 코드를 반영해주는 기능을 제공한다.
 
 ```
 
