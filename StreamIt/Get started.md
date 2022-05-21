@@ -107,7 +107,7 @@ st.table(dataframe)
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169662097-63c8102d-6e2e-4d2f-9c30-fc88a9f83722.png)
 
-# Draw a line chart
+## Draw a line chart
 ```python
 import streamlit as st
 import numpy as np
@@ -123,3 +123,15 @@ st.line_chart(chart_data)
 
 ![image](https://user-images.githubusercontent.com/102650331/169662197-798416e3-e3d0-4826-a70a-b9662be7e908.png)
 
+```python
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+map_data = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+st.map(map_data)
+
+```
