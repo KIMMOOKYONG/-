@@ -78,6 +78,7 @@ dataframe = np.random.randn(10, 20)
 st.dataframe(dataframe)
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/169662025-a58d884c-fad1-4b30-a750-6a3293688408.png)
 
 ```python
 import streamlit as st
