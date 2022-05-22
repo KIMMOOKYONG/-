@@ -96,3 +96,16 @@ data_load_state.text("Done! (using st.cache)")
 
 ![image](https://user-images.githubusercontent.com/102650331/169686764-a0397e67-f87f-427b-bf7f-5f7a1ac88d06.png)
 
+## How's it work?
+- @st.cache 동작 방법 설명
+- Streamlit 함수 호출할 때 다음 3가지를 확인한다.
+    - The actual bytecode that makes up the body of the function
+    - 함수의 본문의 변경
+    - Code, variables, and files that the function depends on
+    - 함수가 참조하는 코드, 파일, 변수의 변경
+    - The input parameters that you called the function with
+    - 함수호출 변수 값 변경
+- 최초 함수 호출시 실행, 실행결과 local cache 저장
+- 3가지 변경 사항이 없으면 local cache 에서 결과를 읽어 반환
+- 현재 작업 디렉토리 내의 변경 사항만 확인
+
