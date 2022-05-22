@@ -267,6 +267,26 @@ for i in range(100):
 
 ![image](https://user-images.githubusercontent.com/102650331/169677279-9e03fc0f-d8f7-40cb-83b4-2a68c5c536fc.png)
 
+# Caching
+
+```python
+import streamlit as st
+
+# 함수 단위로 설정이 가능하다.
+@st.cache  # 👈 This function will be cached
+def my_slow_function(arg1, arg2):
+    # Do something really slow in here!
+    return the_output
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169677323-232ae401-ef62-4710-9bef-59b467e88675.png)
+
+# App model
+![image](https://user-images.githubusercontent.com/102650331/169677367-0c4a7467-7c5e-421f-bc31-66c4fa11b425.png)
+
+![image](https://user-images.githubusercontent.com/102650331/169677384-72845713-341f-44da-b2c0-6c0c32644d6a.png)
+
+
 
 
 # 참고
