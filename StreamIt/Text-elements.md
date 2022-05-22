@@ -48,5 +48,41 @@ st.caption("This is a string that explains something above.")
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169701428-d9fefaf9-2ebd-424f-bcbb-f4376a67fe29.png)
 
+# st.code
+
+```python
+import streamlit as st
+
+code = '''def hello():
+     print("Hello, Streamlit!")'''
+st.code(code, language="python")
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169701509-0af996ca-e6c3-43a7-9e97-efd629e7252a.png)
+
+# st.text
+
+```python
+import streamlit as st
+
+st.text("This is some text.")
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169701552-c13c34fe-15c6-409a-a45d-27565658e58f.png)
+
+# st.latex
+
+```python
+import streamlit as st
+
+st.latex(r'''
+     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+     \sum_{k=0}^{n-1} ar^k =
+     a \left(\frac{1-r^{n}}{1-r}\right)
+     ''')
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169701593-6e82f101-9873-48d1-8fb1-1e1454c9ae4e.png)
+
 
 
