@@ -234,6 +234,37 @@ with right_column:
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169677045-9c22d941-4ab3-4df8-85fc-3cefe4ae6013.png)
 
+![image](https://user-images.githubusercontent.com/102650331/169677080-7459490b-c417-4465-8db9-d2ec0aaa09a1.png)
+
+## Show progress
+
+```python
+import streamlit as st
+import time
+
+"Starting a long computation..."
+
+# Add a placeholder
+latest_iteration = st.empty()
+bar = st.progress(0)
+
+for i in range(100):
+  # Update the progress bar with each iteration.
+  latest_iteration.text(f"Iteration {i+1}")
+  bar.progress(i + 1)
+  time.sleep(0.1)
+
+"...and now we\"re done!"
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169677118-bb7b9d47-c6ed-4217-a78e-f1bc662c3259.png)
+
+# Themes
+
+![image](https://user-images.githubusercontent.com/102650331/169677147-cb57f96c-81f9-4b08-b315-1aa895501ddf.png)
+
+![image](https://user-images.githubusercontent.com/102650331/169677156-3ecd198f-b67a-4ae3-81c3-adb5b6442590.png)
+
 
 
 
