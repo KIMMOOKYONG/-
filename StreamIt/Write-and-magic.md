@@ -38,6 +38,25 @@ st.write("Below is a DataFrame:", data_frame, "Above is a dataframe.")
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169700743-c190fa1d-6f62-4148-ac22-4eecb1f30ff9.png)
 
+```python
+import streamlit as st
+import pandas as pd
+import numpy as np
+import altair as alt
+
+df = pd.DataFrame(
+     np.random.randn(200, 3),
+     columns=['a', 'b', 'c'])
+
+c = alt.Chart(df).mark_circle().encode(
+     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
+st.write(c)
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169700843-31d74937-3314-4591-81f7-466afe369af1.png)
+
+
 
 
 
