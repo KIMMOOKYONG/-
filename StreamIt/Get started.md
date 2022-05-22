@@ -139,6 +139,15 @@ st.map(map_data)
 ![image](https://user-images.githubusercontent.com/102650331/169662397-a59fe5f8-c7ce-46f0-9102-cdf42926a488.png)
 
 # Widgets
+```python
+import streamlit as st
+x = st.slider("x")
+st.write(x, "squared is", x * x)
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169676470-46c3cea4-dea0-4912-8118-9cae93b33801.png)
+
+
 
 # 참고
 - (Streamlit with Nginx) https://medium.com/featurepreneur/streamlit-with-nginx-bde7a9a41e6c
