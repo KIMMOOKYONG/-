@@ -198,4 +198,3 @@ hist_values = np.histogram(
 st.bar_chart(hist_values)
 
 ```
-
