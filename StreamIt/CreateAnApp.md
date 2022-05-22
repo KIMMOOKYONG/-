@@ -1,4 +1,10 @@
 # Create your first app
+- 스크립트 파일 생성
+- 라이브러리 로딩
+- 스크립트 작성
+- 실행
+- 결과 확인 및 수정 등
+
 ```python
 # uber_pickups.py
 
