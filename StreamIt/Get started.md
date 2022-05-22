@@ -263,8 +263,7 @@ for i in range(100):
 
 ![image](https://user-images.githubusercontent.com/102650331/169677147-cb57f96c-81f9-4b08-b315-1aa895501ddf.png)
 
-![image](https://user-images.githubusercontent.com/102650331/169677156-3ecd198f-b67a-4ae3-81c3-adb5b6442590.png)
-
+![image](https://docs.streamlit.io/images/edit_theme.gif)
 
 
 
