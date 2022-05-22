@@ -437,5 +437,11 @@ st.map(filtered_data)
 ![image](https://user-images.githubusercontent.com/102650331/169689104-b80860fc-280a-47a0-a82e-895d632f11fc.png)
 
 
+# Share your app
+- It works in 3 simple steps:
+    - Put your app in a public GitHub repo (and make sure it has a requirements.txt!)
+    - Sign into share.streamlit.io
+    - Click 'Deploy an app' and then paste in your GitHub URL
+
 
 
