@@ -261,10 +261,9 @@ for i in range(100):
 
 # Themes
 
-![image](https://user-images.githubusercontent.com/102650331/169677147-cb57f96c-81f9-4b08-b315-1aa895501ddf.png)
+![image](https://docs.streamlit.io/images/change_theme.gif)
 
 ![image](https://docs.streamlit.io/images/edit_theme.gif)
-
 
 
 
