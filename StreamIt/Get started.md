@@ -147,6 +147,16 @@ st.write(x, "squared is", x * x)
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169676470-46c3cea4-dea0-4912-8118-9cae93b33801.png)
 
+```python
+import streamlit as st
+st.text_input("Your name", key="name")
+
+# You can access the value at any point with:
+st.session_state.name
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169676554-3a1353fe-adcc-41c5-b4b5-7dcd08794cc0.png)
+
 
 
 # 참고
