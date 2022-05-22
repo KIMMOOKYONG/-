@@ -157,6 +157,46 @@ st.session_state.name
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169676554-3a1353fe-adcc-41c5-b4b5-7dcd08794cc0.png)
 
+## Use checkboxes to show/hide data
+
+```python
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+if st.checkbox("Show dataframe"):
+    chart_data = pd.DataFrame(
+       np.random.randn(20, 3),
+       columns=["a", "b", "c"])
+
+    chart_data
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169676802-5016e9e1-c0ff-4410-8bc1-6a561d4c11fb.png)
+
+## Use a selectbox for options
+
+```python
+import streamlit as st
+import pandas as pd
+
+df = pd.DataFrame({
+    "first column": [1, 2, 3, 4],
+    "second column": [10, 20, 30, 40]
+    })
+
+# 배열 또는 데이터프
+option = st.selectbox(
+    "Which number do you like best?",
+     df["first column"])
+
+"You selected: ", option
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/169676860-87af4df0-8b29-40cd-b1ea-ddbcaf50723a.png)
+
+
 
 
 # 참고
