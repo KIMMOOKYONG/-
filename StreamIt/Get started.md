@@ -265,6 +265,8 @@ for i in range(100):
 
 ![image](https://docs.streamlit.io/images/edit_theme.gif)
 
+![image](https://user-images.githubusercontent.com/102650331/169677279-9e03fc0f-d8f7-40cb-83b4-2a68c5c536fc.png)
+
 
 
 # 참고
