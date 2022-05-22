@@ -196,6 +196,45 @@ option = st.selectbox(
 
 ![image](https://user-images.githubusercontent.com/102650331/169676860-87af4df0-8b29-40cd-b1ea-ddbcaf50723a.png)
 
+# Layout
+
+```python
+import streamlit as st
+
+# Add a selectbox to the sidebar:
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+# Add a slider to the sidebar:
+add_slider = st.sidebar.slider(
+    "Select a range of values",
+    0.0, 100.0, (25.0, 75.0)
+)
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169676984-b335d26a-57b3-420c-8e3c-353e1f8545de.png)
+
+```python
+import streamlit as st
+
+# st.columns, st.expander
+left_column, right_column = st.columns(2)
+# You can use a column just like st.sidebar:
+left_column.button("Press me!")
+
+# Or even better, call Streamlit functions inside a "with" block:
+with right_column:
+    chosen = st.radio(
+        "Sorting hat",
+        ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
+    st.write(f"You are in {chosen} house!")
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169677045-9c22d941-4ab3-4df8-85fc-3cefe4ae6013.png)
+
+
 
 
 
