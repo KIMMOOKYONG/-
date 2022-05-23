@@ -11,3 +11,7 @@
 - 5) 인덱스 검색
 - 6) 문자열 부분검색( str.contains, str.startswith, str.endswith )
 
+
+
+# 참조
+- https://m.blog.naver.com/wideeyed/221867273249
