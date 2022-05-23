@@ -51,7 +51,7 @@ var7 = c7.selectbox(
     ("Pen","Pencil","Eraser","Sharpener","Notebook"))
 
 
-var8 = c8.text_input("주유소명")
+var8 = c8.text_input("주유소명을 입력하세요.")
 
 
 # 서울 행정구역 json raw파일(githubcontent)
