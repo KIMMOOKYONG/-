@@ -75,4 +75,32 @@ expander.image("https://static.streamlit.io/examples/dice.jpg")
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169938154-9bbdd116-25a6-48f2-bc64-fb4f15fdeecc.png)
 
+# st.container
 
+```python
+import streamlit as st
+import numpy as np
+
+with st.container():
+    st.write("This is inside the container")
+
+    # You can call any Streamlit command, including custom components:
+    st.bar_chart(np.random.randn(50, 3))
+
+st.write("This is outside the container")
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169938554-16eb569d-39fa-444c-88e1-ff3a888668b2.png)
+
+```python
+import streamlit as st
+import numpy as np
+
+container = st.container()
+container.write("This is inside the container")
+st.write("This is outside the container")
+
+# Now insert some more in the container
+container.write("This is inside too")
+
+```
