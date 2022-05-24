@@ -19,3 +19,19 @@ with st.sidebar:
 ```
 ![image](https://user-images.githubusercontent.com/102650331/169935948-f33fb453-d097-447c-83ba-5d6f817f1726.png)
 
+```python
+import streamlit as st
+import time
+
+with st.sidebar:
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
+
+```
+![image](https://user-images.githubusercontent.com/102650331/169936186-5c3c817e-cf6d-4159-b4e1-136c150e7fcb.png)
+
+
