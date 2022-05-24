@@ -104,3 +104,38 @@ st.write("This is outside the container")
 container.write("This is inside too")
 
 ```
+
+# st.empty
+
+```python
+import streamlit as st
+import numpy as np
+import time
+
+with st.empty():
+     for seconds in range(60):
+         st.write(f"⏳ {seconds} seconds have passed")
+         time.sleep(1)
+     st.write("✔️ 1 minute over!")
+
+```
+```python
+import streamlit as st
+
+placeholder = st.empty()
+
+# Replace the placeholder with some text:
+placeholder.text("Hello")
+
+# Replace the text with a chart:
+placeholder.line_chart({"data": [1, 5, 2, 6]})
+
+# Replace the chart with several elements:
+with placeholder.container():
+     st.write("This is one element")
+     st.write("This is another")
+
+# Clear all those elements:
+placeholder.empty()
+```
+
