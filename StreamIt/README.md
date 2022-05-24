@@ -1,3 +1,11 @@
+# 참고
+- https://blog.streamlit.io/tag/tutorials/
+- https://towardsdatascience.com/rational-ui-design-with-streamlit-61619f7a6ea4
+- https://wycho.tistory.com/258
+- https://www.youtube.com/watch?v=wDysPcF0Hbc
+- https://www.youtube.com/watch?v=RHzjE-WBaSk
+- https://www.youtube.com/watch?v=hQnMV_bF84I 
+
 # StreamIt 시작하기
 ```
 # STEP1.필요 패키지 설치(StreamIt, localtunnel)
