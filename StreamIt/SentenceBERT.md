@@ -1,3 +1,19 @@
+# 구글 코랩 파이썬 버전 업그레이드
+```
+#install python 3.9
+!sudo apt-get update -y
+!sudo apt-get install python3.9
+
+#change alternatives
+!sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+!sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
+
+#check python version
+!python --version
+#3.9.6
+
+```
+
 # SentenceBERT 모델 로드
 ```python
 import pandas as pd
