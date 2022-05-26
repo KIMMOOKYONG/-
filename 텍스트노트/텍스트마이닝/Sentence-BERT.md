@@ -53,3 +53,39 @@ model.encode(df.loc[0, "유저"])
 
 ```
 
+```python
+model.encode(df.loc[0, "유저"])
+
+```
+![image](https://user-images.githubusercontent.com/102650331/170454873-3f25e0c5-3d77-4b09-8d6d-e123afc764ac.png)
+
+# 데이터 인코딩
+```python
+df["embedding"] = pd.Series([[]] * len(df)) # dummy
+df["embedding"] = df["유저"].map(lambda x: list(model.encode(x)))
+df.head()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/170455294-6fde7731-9093-4ce0-a717-47d106bd0a58.png)
+
+# 간단한 챗봇
+```python
+text = "요즘 머리가 아프고 너무 힘들어"
+embedding = model.encode(text)
+
+df["distance"] = df["embedding"].map(lambda x: cosine_similarity([embedding], [x]).squeeze())
+df.head()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/170455501-07653429-39c4-461f-93c2-129585e9444c.png)
+
+```python
+answer = df.loc[df["distance"].idxmax()]
+
+print("구분", answer["구분"])
+print("유사한 질문", answer["유저"])
+print("챗봇 답변", answer["챗봇"])
+print("유사도", answer["distance"])
+
+```
+![image](https://user-images.githubusercontent.com/102650331/170455592-88a0ac5b-ddfd-48cf-9ef7-b9c2a4eae21e.png)
