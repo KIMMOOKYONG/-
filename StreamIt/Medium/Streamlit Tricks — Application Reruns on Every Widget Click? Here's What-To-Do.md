@@ -37,3 +37,11 @@ if load:
 ```
 ![](https://miro.medium.com/max/700/1*p4IAXz04uXK0eiJpfqx8_g.gif)
 
+- 파이 차트 라디오 버턴을 선택해서 파일 차트를 출력할 의도였는데, 스크립트가 재실행되면서 button 의 상태가 초기화되어 파일 차트를 볼 방법이 없다.
+
+# 해결 방법
+## Usage of Streamlit checkbox widget(UI 관점에서는 이슈 있음)
+- 체크박스를 사용해서 데이터의 로딩 상태 정보 저장
+
+![](https://miro.medium.com/max/700/1*JH0f6_FY-MDioUWWNjU0ng.gif)
+
