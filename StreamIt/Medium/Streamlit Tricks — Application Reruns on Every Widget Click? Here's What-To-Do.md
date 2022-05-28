@@ -4,3 +4,35 @@
 - 이를 해결하는 방법에 대해서 알아보자.
 
 # Default behaviour of any Streamlit Web App (The Linear flow)
+```python
+# ---- Modules ------- 
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+st.header("Fruits List")
+# ---- Creating Dictionary ----
+_dic = { 'Name': ['Mango', 'Apple', 'Banana'],
+         'Quantity': [45, 38, 90]}
+
+load = st.button('Load Data')
+
+if load:
+    _df = pd.DataFrame(_dic)
+    st.write(_df)
+
+    # ---- Plot types -------
+    opt = st.radio('Plot type :',['Bar', 'Pie'])
+    if opt == 'Bar':
+        fig = px.bar(_df, x= 'Name',
+                    y = 'Quantity',title ='Bar Chart')
+        st.plotly_chart(fig)
+
+    else:     
+        fig = px.pie(_df,names = 'Name',
+                    values = 'Quantity',title ='Pie Chart')
+        st.plotly_chart(fig)
+        
+
+```
+![image](https://user-images.githubusercontent.com/102650331/170826003-334f06f7-d64a-4997-a019-2a308943cfa5.png)
