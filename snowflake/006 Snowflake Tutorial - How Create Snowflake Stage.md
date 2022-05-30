@@ -24,3 +24,6 @@ https://s3.amazonaws.com/tripdata/index.html
 
 ![image](https://user-images.githubusercontent.com/102650331/170975657-ccb8dbac-2bc3-4664-a1d9-6d3c022e6a4a.png)
 
+![image](https://user-images.githubusercontent.com/102650331/170977161-5cba162c-9e9c-4826-af24-fd8a540624cb.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170977197-1f49269e-0749-419a-bd7a-f109e9732743.png)
