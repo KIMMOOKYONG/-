@@ -8,3 +8,12 @@
 CREATE DATABASE CITYBIKE COMMENT = 'Sample database';
 
 ```
+
+## 테이블 생성
+![image](https://user-images.githubusercontent.com/102650331/170956547-ba74e09f-01b9-4aa7-a02c-b22a6b55048a.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170956999-75b4c23b-368f-4380-a69e-dc60a97c222f.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170957236-8f6c8a98-e9b2-4a69-b72e-b6bb568e2c16.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170957473-a7a4f2b9-6819-4ea2-be23-75648ad0ad41.png)
