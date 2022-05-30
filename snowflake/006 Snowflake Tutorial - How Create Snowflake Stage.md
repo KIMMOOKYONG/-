@@ -20,3 +20,7 @@ https://s3.amazonaws.com/tripdata/index.html
 ![image](https://user-images.githubusercontent.com/102650331/170975193-c127fa51-9488-4603-8564-45b01a4d657b.png)
 
 
+![image](https://user-images.githubusercontent.com/102650331/170975514-1b88bf1d-26ae-4a10-a5f1-367bef57bc64.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170975657-ccb8dbac-2bc3-4664-a1d9-6d3c022e6a4a.png)
+
