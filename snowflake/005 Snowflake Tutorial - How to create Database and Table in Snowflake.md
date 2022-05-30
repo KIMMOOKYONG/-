@@ -44,3 +44,6 @@ create or replace table trips (
 
 ![image](https://user-images.githubusercontent.com/102650331/170958585-bffd8a64-81ef-4452-a773-0ceecec1865b.png)
 
+![image](https://user-images.githubusercontent.com/102650331/170962536-039b959f-78c8-4481-acfe-b1103b27c375.png)
+
+
