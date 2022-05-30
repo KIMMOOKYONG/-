@@ -25,3 +25,15 @@ CREATE OR REPLACE WAREHOUSE VM_EXAMPLE_1
 # UI를 통한 WAREHOUSE 생성
 ![image](https://user-images.githubusercontent.com/102650331/170953929-05374ffe-f913-4563-b719-444ccb7e7162.png)
 
+![image](https://user-images.githubusercontent.com/102650331/170954628-73a5048a-8745-4bca-a6b6-ab4af2b68f70.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170954734-c9b65e91-9aef-42c9-8a03-39109fe8baf0.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170954767-d8a11dd4-4887-4c19-9ed2-a0378ed83dfc.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170954984-e347bcf4-dfcc-44b6-ab5d-da3ecdcd3c4c.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170955036-99398781-5c45-4432-adf5-9aa4ba54f28c.png)
+
+![image](https://user-images.githubusercontent.com/102650331/170955094-da0f28a9-d5dc-4ced-ba45-9d4ad1e3e05d.png)
+
