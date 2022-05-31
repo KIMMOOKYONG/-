@@ -29,8 +29,8 @@
 ```python
 import pandas as pd
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
-df = pd.read_csv(url, names=["sepal length","sepal width","petal length","petal width","target"])
-df.head()
+data = pd.read_csv(url, names=["sepal length","sepal width","petal length","petal width","target"])
+data.head()
 
 ```
 ![image](https://user-images.githubusercontent.com/102650331/171083965-fa9b3cfd-8046-4217-a301-839871f47c8c.png)
@@ -53,7 +53,8 @@ y = df["target"].values # 종속변인 추출
 x = StandardScaler().fit_transform(x) # x객체에 x를 표준화한 데이터를 저장
 
 features = ["sepal length", "sepal width", "petal length", "petal width"]
-pd.DataFrame(x, columns=features).head()
+df = pd.DataFrame(x, columns=features).head()
+df.head()
 
 ```
 ![image](https://user-images.githubusercontent.com/102650331/171084461-6ff53ed3-b2c3-4fed-9328-671f83e7ad99.png)
