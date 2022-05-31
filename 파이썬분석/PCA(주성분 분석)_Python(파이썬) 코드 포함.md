@@ -59,7 +59,12 @@ pd.DataFrame(x, columns=features).head()
 ![image](https://user-images.githubusercontent.com/102650331/171084461-6ff53ed3-b2c3-4fed-9328-671f83e7ad99.png)
 
 
-# PCA 실행 
+# PCA 실행
+```python
+finalDf = pd.concat([principalDf, data], axis=1)
+
+```
+
 ```python
 from sklearn.decomposition import PCA
 pca = PCA(n_components=2) # 주성분을 몇개로 할지 결정
