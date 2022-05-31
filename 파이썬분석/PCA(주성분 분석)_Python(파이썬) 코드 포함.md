@@ -54,4 +54,16 @@ pd.DataFrame(x, columns=features).head()
 ![image](https://user-images.githubusercontent.com/102650331/171084461-6ff53ed3-b2c3-4fed-9328-671f83e7ad99.png)
 
 
+# PCA 실행 
+```python
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2) # 주성분을 몇개로 할지 결정
+printcipalComponents = pca.fit_transform(x)
+principalDf = pd.DataFrame(data=printcipalComponents, columns = ["principal component1", "principal component2"])
+# 주성분으로 이루어진 데이터 프레임 구성
+principalDf.head()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/171084845-8f0217ac-0e1e-4638-be2d-213884ceac46.png)
+
 
