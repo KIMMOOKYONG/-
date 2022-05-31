@@ -34,6 +34,9 @@ df.head()
 - pca를 하기 전에 데이터 스케일링을 하는 이유는 데이터의 스케일에 따라 주성분의 설명 가능한 분산량이 달라질 수 있기 때문이다. 
 ![image](https://user-images.githubusercontent.com/102650331/171084084-bb49bfd3-5d4e-486b-a4c0-42589b2f6f69.png)
 
+- 표준화가 모델 성능에 미치는 영향
+![image](https://user-images.githubusercontent.com/102650331/171084639-d09af2fc-3d95-4660-9e0e-efd3ffd0041a.png)
+
 - 따라서, scale을 하지 않으면 변인이 가진 값의 크기에 따라 설명 가능한 분산량이 왜곡될 수 있기 때문에 반드시 표준화를 해주어야 한다. 
 
 - 표준화된 데이터
