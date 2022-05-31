@@ -67,3 +67,59 @@ principalDf.head()
 ![image](https://user-images.githubusercontent.com/102650331/171084845-8f0217ac-0e1e-4638-be2d-213884ceac46.png)
 
 
+# 도대체 어떤 이유를 근거로 주성분을 2개로 결정하는가? 
+![image](https://user-images.githubusercontent.com/102650331/171085013-757018e3-fa55-49ce-a1a2-d2c145a4ff45.png)
+-본 그래프에서 주성분 6개일 때, 누적 설명 분산량이 73%이기 때문에 주성분을 6개로 결정하였다.
+
+```python
+pca.explained_variance_ratio_
+# array([0.72770452, 0.23030523])
+
+```
+```python
+sum(pca.explained_variance_ratio_)
+# 0.9580097536148197
+
+```
+- pca에서 위와 같은 코드로 간단하게 내가 설정한 주성분의 개수(n_components)로 전체 데이터의 분산을 얼마만큼 설명 가능한지 알 수 있다.
+- 본 데이터의 경우 두 개의 주성분이 전체 분산의 약 96%를 설명한다. 
+
+```python
+pca = PCA(n_components=3)
+printcipalComponents = pca.fit_transform(x)
+principalDf = pd.DataFrame(data=printcipalComponents, columns = ["principal component1", "principal component2", "3"])
+pca.explained_variance_ratio_
+
+# 혹시나 궁금하신 분들을 위해 n_components=3으로 분석을 진행해봤다. 분석 결과, 3번째 주성분의 분산 설명량은 0.03밖에 되지 않는 것을 알 수 있다. 
+# 따라서, 추가적인 주성분을 투입하더라도 설명 가능한 분산량이 얼마 증가하지 않기 때문에 주성분은 두 개로 결정하는 것이 적절하다고 할 수 있다. 
+
+```
+
+# 두 개의 주성분을 이용한 iris species 시각화
+- 이제 두 개의 주성분을 이용하여 iris 데이터의 species가 어떤 식으로 표현되는지 그래프를 이용하여 확인해보자. 
+
+```python
+import matplotlib.pyplot as plt
+
+fig = plt.figure(figsize = (8, 8))
+ax = fig.add_subplot(1, 1, 1)
+ax.set_xlabel('Principal Component 1', fontsize = 15)
+ax.set_ylabel('Principal Component 2', fontsize = 15)
+ax.set_title('2 component PCA', fontsize=20)
+
+targets = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+colors = ['r', 'g', 'b']
+for target, color in zip(targets,colors):
+    indicesToKeep = finalDf['target'] == target
+    ax.scatter(finalDf.loc[indicesToKeep, 'principal component1']
+               , finalDf.loc[indicesToKeep, 'principal component2']
+               , c = color
+               , s = 50)
+ax.legend(targets)
+ax.grid()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/171085821-3a38a9ad-1463-49b3-841d-336d77433dbf.png)
+
+
+
