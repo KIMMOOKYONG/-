@@ -76,11 +76,14 @@ principalDf.head()
 ![image](https://user-images.githubusercontent.com/102650331/171085013-757018e3-fa55-49ce-a1a2-d2c145a4ff45.png)
 -본 그래프에서 주성분 6개일 때, 누적 설명 분산량이 73%이기 때문에 주성분을 6개로 결정하였다.
 
+## 전체에서 해당 주성분의 고윳값이 차지하는 비율을 알아보는 것이다.  
 ```python
 pca.explained_variance_ratio_
 # array([0.72770452, 0.23030523])
 
 ```
+
+## 두개의 주성분이 전체 데이터의 분산에 대한 설명하는 정도
 ```python
 sum(pca.explained_variance_ratio_)
 # 0.9580097536148197
@@ -89,11 +92,13 @@ sum(pca.explained_variance_ratio_)
 - pca에서 위와 같은 코드로 간단하게 내가 설정한 주성분의 개수(n_components)로 전체 데이터의 분산을 얼마만큼 설명 가능한지 알 수 있다.
 - 본 데이터의 경우 두 개의 주성분이 전체 분산의 약 96%를 설명한다. 
 
+## 분석 결과, 3번째 주성분의 분산 설명량은 0.03밖에 되지 않는 것을 알 수 있다. 
 ```python
 pca = PCA(n_components=3)
 printcipalComponents = pca.fit_transform(x)
 principalDf = pd.DataFrame(data=printcipalComponents, columns = ["principal component1", "principal component2", "3"])
 pca.explained_variance_ratio_
+# array([0.72770452, 0.23030523, 0.03683832])
 
 # 혹시나 궁금하신 분들을 위해 n_components=3으로 분석을 진행해봤다. 분석 결과, 3번째 주성분의 분산 설명량은 0.03밖에 되지 않는 것을 알 수 있다. 
 # 따라서, 추가적인 주성분을 투입하더라도 설명 가능한 분산량이 얼마 증가하지 않기 때문에 주성분은 두 개로 결정하는 것이 적절하다고 할 수 있다. 
@@ -108,23 +113,19 @@ import matplotlib.pyplot as plt
 
 fig = plt.figure(figsize = (8, 8))
 ax = fig.add_subplot(1, 1, 1)
-ax.set_xlabel('Principal Component 1', fontsize = 15)
-ax.set_ylabel('Principal Component 2', fontsize = 15)
-ax.set_title('2 component PCA', fontsize=20)
+ax.set_xlabel("Principal Component 1", fontsize = 15)
+ax.set_ylabel("Principal Component 2", fontsize = 15)
+ax.set_title("2 component PCA", fontsize=20)
 
-targets = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
-colors = ['r', 'g', 'b']
+targets = ["Iris-setosa", "Iris-versicolor", "Iris-virginica"]
+colors = ["r", "g", "b"]
 for target, color in zip(targets,colors):
-    indicesToKeep = finalDf['target'] == target
-    ax.scatter(finalDf.loc[indicesToKeep, 'principal component1']
-               , finalDf.loc[indicesToKeep, 'principal component2']
+    indicesToKeep = finalDf["target"] == target
+    ax.scatter(finalDf.loc[indicesToKeep, "principal component1"]
+               , finalDf.loc[indicesToKeep, "principal component2"]
                , c = color
                , s = 50)
 ax.legend(targets)
 ax.grid()
-
 ```
-![image](https://user-images.githubusercontent.com/102650331/171085821-3a38a9ad-1463-49b3-841d-336d77433dbf.png)
-
-
-
+![image](https://user-images.githubusercontent.com/102650331/171123332-cdb24675-6179-4594-9868-1b2f7ce18eaf.png)
