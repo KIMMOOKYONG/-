@@ -1,3 +1,6 @@
+# 참조
+- https://m.blog.naver.com/tjdrud1323/221720259834
+- 
 # PCA는 무엇이며 언제 사용하는가?
 - (주성분분석설명)https://www.youtube.com/watch?v=FgakZw6K1QQ
 - (공분산 행렬의 의미와 PCA)https://www.youtube.com/watch?v=jNwf-JUGWgg
