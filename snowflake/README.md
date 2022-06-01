@@ -5,3 +5,7 @@
 - https://www.youtube.com/c/RajivGuptaEverydayLearning/playlists
 - https://rajivgupta780184.medium.com/zero-to-hero-in-snowflake-snowpro-certified-in-2-week-8ec62cd89674
 - 
+
+# 스노우 플레이크 동영상
+- https://www.youtube.com/playlist?list=PLRt-r4QiDOMeXYa3yVY2giFORai78iV34
+- 
