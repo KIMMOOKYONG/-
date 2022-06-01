@@ -38,3 +38,6 @@ file_format=CSV;
 select * from trips;
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/171318118-051e457e-d3a3-43fa-bde8-54971fe2cf19.png)
+
