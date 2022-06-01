@@ -8,4 +8,5 @@
 
 # 스노우 플레이크 동영상
 - https://www.youtube.com/playlist?list=PLRt-r4QiDOMeXYa3yVY2giFORai78iV34
+- https://www.youtube.com/watch?v=XK8OYO5y_As
 - 
