@@ -16,3 +16,17 @@
 
 
 ![image](https://user-images.githubusercontent.com/102650331/171310866-f9b8b1be-aaca-4bd3-ae2d-b466b9851124.png)
+
+```sql
+copy into trips from @citibike_trips 
+file_format=CSV
+on_error = 'skip_file';
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/171311246-b4e68d44-455f-47b3-bcc6-e4630f0f0fb4.png)
+
+```sql
+select * from trips;
+
+```
