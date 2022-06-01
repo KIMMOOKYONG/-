@@ -24,6 +24,14 @@ on_error = 'skip_file';
 
 ```
 
+```python
+copy into trips from @citibike_trips 
+pattern='.*trips_2013.*[^0-9].*.csv.gz' 
+FORCE = TRUE 
+file_format=CSV;
+
+```
+
 ![image](https://user-images.githubusercontent.com/102650331/171311246-b4e68d44-455f-47b3-bcc6-e4630f0f0fb4.png)
 
 ```sql
