@@ -6,4 +6,6 @@
 - https://towardsdatascience.com/how-to-install-mysql-and-create-an-employees-sample-database-80dd9c5d4767
 - https://learnsql.com/blog/count-join-sql/
 - https://www3.ntu.edu.sg/home/ehchua/programming/sql/SampleDatabases.html
+- https://www.fun-coding.org/mysql_pratices5.html
+- https://junetudie.tistory.com/11
 - 
