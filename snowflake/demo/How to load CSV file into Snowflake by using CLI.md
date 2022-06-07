@@ -44,3 +44,21 @@
 put file://C:\Users\dbkorea\Downloads\departments.csv @EMPLOYEES.PUBLIC.%departments;
 
 ```
+
+- 스테이징 영역 확인
+
+![image](https://user-images.githubusercontent.com/102650331/172354959-05d02afd-ec0f-4bdf-bb84-a30d3e92bb5a.png)
+
+- 테이블 데이터 로딩
+
+```
+copy into departments
+    from @%departments
+    file_format = (type = csv field_optionally_enclosed_by='"')
+    pattern = 'departments.csv.gz'
+    on_error = 'skip_file';
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/172355875-b303057a-3010-49e7-aa0f-21b7a26e4426.png)
+
