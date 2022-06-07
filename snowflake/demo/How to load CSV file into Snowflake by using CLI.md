@@ -26,3 +26,21 @@
 
 ![image](https://user-images.githubusercontent.com/102650331/172340467-be6422b3-ba9f-4987-994c-3b40491bd542.png)
 
+![image](https://user-images.githubusercontent.com/102650331/172342383-6bad5109-bf22-4e14-80da-5c7d5dc307ac.png)
+
+# 테스트
+- 테이블 생성
+
+![image](https://user-images.githubusercontent.com/102650331/172343259-e9119cb3-bae4-4652-a8e9-1027f347db47.png)
+
+- 데이터 로딩
+
+![image](https://user-images.githubusercontent.com/102650331/172353621-381dfd06-5d82-494e-9ca4-4690e7f02644.png)
+
+![image](https://user-images.githubusercontent.com/102650331/172354536-87b0c92e-8b39-428b-8c58-d9957c00e423.png)
+
+```
+# 스테이징 영역에 데이터 로딩하기
+put file://C:\Users\dbkorea\Downloads\departments.csv @EMPLOYEES.PUBLIC.%departments;
+
+```
