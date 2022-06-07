@@ -11,3 +11,17 @@
 
 ![image](https://user-images.githubusercontent.com/102650331/172337401-3f3f77b9-82aa-4d96-9545-6b4042e18e82.png)
 
+- 연결 성공
+
+![image](https://user-images.githubusercontent.com/102650331/172338852-83ee5ed3-8f3d-40d2-b81b-2af6b84aecfe.png)
+
+- 연결 종료 방법은 ctrl + d
+
+![image](https://user-images.githubusercontent.com/102650331/172338960-abf9f135-e0f9-4d72-ba51-fb5cae82845c.png)
+
+
+- 환경 설정
+
+![image](https://user-images.githubusercontent.com/102650331/172339920-10ff75dd-9422-4a2f-b388-071a614f7900.png)
+
+
