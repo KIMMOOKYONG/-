@@ -72,3 +72,5 @@ insert into students (id) values (44), (-44);
 select id, validate_id(id) from students order by id;
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/172568239-5e8ce429-1701-4687-a2d1-582709c4645f.png)
+
