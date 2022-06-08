@@ -32,3 +32,23 @@ select calculate_mul(3, null);
 ```
 ![image](https://user-images.githubusercontent.com/102650331/172562199-3a870de9-4865-460e-8445-accdd6c3009f.png)
 
+# 자바스크립트 활용 함수 정의
+```javascript
+create or replace function validate_id(id float)
+returns varchar
+language javascript
+as 
+    $$
+    try {
+        if (id < 0) {
+            throw "id cannot be negative!";
+        } else {
+            return "id validated."
+        }
+    } catch (err) {
+        return "Error: " + err
+    }
+    $$;
+
+
+```
