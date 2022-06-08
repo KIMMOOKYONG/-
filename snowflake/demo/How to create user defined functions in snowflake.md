@@ -32,7 +32,7 @@ select calculate_mul(3, null);
 ```
 ![image](https://user-images.githubusercontent.com/102650331/172562199-3a870de9-4865-460e-8445-accdd6c3009f.png)
 
-# 자바스크립트 활용 함수 정의
+# creation of javascript user defined function with try catch block
 ```javascript
 create or replace function validate_id(id float)
 returns varchar
@@ -50,5 +50,20 @@ as
     }
     $$;
 
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/172563434-58fcd888-dea3-4dff-be6b-0b965af3cee5.png)
+
+# create a table with valid and invalid values
+```sql
+create or replace table students(id integer);
+insert into students (id) values (44), (-44);
+
+```
+
+# calling the function in sql query
+```sql
+select id, validate_id(id) from students order by id;
 
 ```
