@@ -34,13 +34,15 @@ select calculate_mul(3, null);
 
 # creation of javascript user defined function with try catch block
 ```javascript
+# 입력 값에 대해서 자바스크립트 내부에서 참조할때 반드시 대문자로 참조해야한다.
+# 아니면 오류가 발생한다.
 create or replace function validate_id(id float)
 returns varchar
 language javascript
 as 
     $$
     try {
-        if (id < 0) {
+        if (ID < 0) {
             throw "id cannot be negative!";
         } else {
             return "id validated."
@@ -54,6 +56,9 @@ as
 ```
 
 ![image](https://user-images.githubusercontent.com/102650331/172563434-58fcd888-dea3-4dff-be6b-0b965af3cee5.png)
+
+![image](https://user-images.githubusercontent.com/102650331/172567983-cce8cf7e-8f86-4010-9800-853c1071cae1.png)
+
 
 # create a table with valid and invalid values
 ```sql
