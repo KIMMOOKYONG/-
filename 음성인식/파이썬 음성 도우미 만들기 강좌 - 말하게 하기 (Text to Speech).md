@@ -4,6 +4,8 @@
 - https://www.youtube.com/watch?v=QZmjzVRjFD8&list=PL4HcB_xg04MraA7q5Io21NBLcy-s-sfsz&index=16
 - https://www.shop2school.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9D%8C%EC%84%B1-%EB%8F%84%EC%9A%B0%EB%AF%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B0%95%EC%A2%8C/
 - https://www.youtube.com/watch?v=7BUK0pOUpKA
+- https://fast-it.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EC%9D%8C%EC%84%B1%EC%9D%B8%EC%8B%9D-%EB%B4%87-%EB%A7%8C%EB%93%A4%EA%B8%B01
+- 
 
 # 패키지 설치
 ```
