@@ -107,3 +107,22 @@ elif "what is your name" in text:
     speak("My name is shop2world)
     
 ```
+
+```python
+import speech_recognition as sr
+from gtts import gTTS
+import os
+import time
+import playsound
+import IPython
+from IPython.display import Audio
+
+def speak(text):
+    tts = gTTS(text=text, lang="ko")
+    filename = "voice.mp3"
+    tts.save(filename)
+    # 구글 코랩에서는 실행 안됨
+    # playsound.playsound(filename)
+    IPython.display.Audio("voice.mp3", autoplay=True)    
+
+```
