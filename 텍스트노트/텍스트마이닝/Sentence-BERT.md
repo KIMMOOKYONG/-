@@ -157,3 +157,71 @@ st.audio(audio_file.read(), start_time=0)
 
 
 ```
+
+```python
+import streamlit as st
+import pandas as pd
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import json
+import time
+
+from gtts import gTTS
+import IPython
+
+@st.cache(allow_output_mutation=True)
+def cached_model():
+    model = SentenceTransformer('jhgan/ko-sroberta-multitask')
+    return model
+
+@st.cache(allow_output_mutation=True)
+def get_dataset():
+    df = pd.read_csv("chatdata.csv")    
+    # df['embedding'] = df['embedding'].apply(json.loads)  
+    return df
+
+def speak(text):
+    tts = gTTS(text=text, lang="ko")
+    filename = "voice.mp3"
+    tts.save(filename)
+
+model = cached_model()
+df = get_dataset()
+
+# df['embedding'] = df['embedding'].apply(json.loads)  
+
+st.header('심리상담 챗봇')
+st.markdown("[❤️빵형의 개발도상국](https://www.youtube.com/c/빵형의개발도상국)")
+
+if 'generated' not in st.session_state:
+    st.session_state['generated'] = []
+
+if 'past' not in st.session_state:
+    st.session_state['past'] = []
+
+with st.form('form', clear_on_submit=True):
+    user_input = st.text_input('당신: ', '')
+    submitted = st.form_submit_button('전송')
+
+if submitted and user_input:
+    embedding = model.encode(user_input)
+
+    df['distance'] = df['embedding'].map(lambda x: cosine_similarity([embedding], [x]).squeeze())
+    answer = df.loc[df['distance'].idxmax()]
+
+    st.session_state.past.append(user_input)
+    st.session_state.generated.append(answer['A'])
+
+message = st.empty()
+for i in range(len(st.session_state["past"])):
+    message.text("사용자: " + st.session_state["past"][i])
+    if len(st.session_state["generated"]) > i:
+        message.text("상담사: " + st.session_state["generated"][i])
+
+speak(st.session_state["generated"][i])
+
+audio_file = open("voice.mp3", "rb")
+st.audio(audio_file.read(), start_time=0)
+
+
+```
