@@ -199,3 +199,41 @@ PermissionError: [Errno 13] Permission denied: .mp3
 https://stackoverflow.com/questions/39818922/errno-13-permission-denied-file-mp3-python
 
 ```
+
+```python
+import speech_recognition as sr
+from gtts import gTTS
+import os
+import time
+import uuid
+import playsound
+
+def speak(text):
+    tts = gTTS(text=text, lang="ko")
+    filename = "voice" + str(uuid.uuid4()) + ".mp3"
+    tts.save(filename)
+    playsound.playsound(filename)
+
+def get_audio():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+        said = ""
+        
+        try:
+            said = r.recognize_google(audio)
+            print(said)
+        except Exception as e:
+            print("Exception: " + str(2))
+    return said
+
+speak("hello")
+while True:
+    text = get_audio()
+
+    if "hello" in text:
+        speak("hello, how are you?")
+    elif "what is your name" in text:
+        speak("My name is shop2world")
+
+```
