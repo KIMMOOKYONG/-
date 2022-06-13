@@ -30,6 +30,18 @@
 
 ```
 
+# 윈도우 설치
+```
+# pyaudio 내력받기
+- lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+- PyAudio‑0.2.11‑cp37‑cp37m‑win32.whl
+- pip install PyAudio‑0.2.11‑cp37‑cp37m‑win32.whl
+
+```
+
+
+
+
 # 음성 생성 코드
 ```python
 import speech_recognition as sr
