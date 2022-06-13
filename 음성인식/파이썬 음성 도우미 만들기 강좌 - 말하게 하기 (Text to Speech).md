@@ -60,6 +60,21 @@ speak("hello shop2word")
 
 ```
 
+```
+# 윈도우 환경 실행시 아래 오류 발생
+Error 263 for command:
+close voice.mp3
+지정한 장치가 열려 있지 않거나 MCI에서 인식되지 않습니다.
+Failed to close the file: voice.mp3
+https://pythonmana.com/2022/02/202202141456530161.html
+https://stackoverflow.com/questions/68531326/what-is-the-error-in-the-code-for-this-playsound-module-even-though-the-syntax-i
+
+pip install playsound==1.2.2
+이버전을 설치하면 해결됨
+
+```
+
+
 ```python
 import speech_recognition as sr
 from gtts import gTTS
