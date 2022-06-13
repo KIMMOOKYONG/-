@@ -153,3 +153,49 @@ def speak(text):
     IPython.display.Audio("voice.mp3", autoplay=True)    
 
 ```
+
+``` python
+import speech_recognition as sr
+from gtts import gTTS
+import os
+import time
+import playsound
+
+def speak(text):
+    tts = gTTS(text=text, lang="ko")
+    filename = "voice" + date_string + ".mp3"
+    tts.save(filename)
+    playsound.playsound(filename)
+
+def get_audio():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+        said = ""
+        
+        try:
+            said = r.recognize_google(audio)
+            print(said)
+        except Exception as e:
+            print("Exception: " + str(2))
+    return said
+
+speak("hello")
+while True:
+    text = get_audio()
+
+    if "hello" in text:
+        speak("hello, how are you?")
+    elif "what is your name" in text:
+        speak("My name is shop2world")
+
+```
+
+```
+with open(str(savefile), "wb") as f:
+PermissionError: [Errno 13] Permission denied: .mp3
+
+응답 시 마다 새로운 파일 생성하는 방법으로 해결하라고 함
+https://stackoverflow.com/questions/39818922/errno-13-permission-denied-file-mp3-python
+
+```
