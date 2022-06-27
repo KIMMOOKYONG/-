@@ -34,4 +34,11 @@
 # 전체 거절
 # 부분 거절
 
+# kaggle 데이터 프로파일링 기능
+# 사용자가 데이터를 가공 후 데이터를 업로드하는 방법
+# 사용자 데이터 공유 기능
+# Connecting Snowflake to CKAN for publishing to the Open Data Portal
+- https://medium.com/snowflake/connecting-snowflake-to-ckan-for-publishing-to-the-open-data-portal-176384708f8e
+
+# 메타데이터 구축 도구 만들기
 
