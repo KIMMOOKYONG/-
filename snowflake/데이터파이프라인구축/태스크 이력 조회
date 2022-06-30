@@ -1,0 +1,57 @@
+# 태스크 이력 조회
+- information_schema.task_history() 테이블 함수 이용
+
+```sql
+select * from table(information_schema.task_history())
+order by scheduled_time;
+
+```
+
+```sql
+select * from
+table(information_schema.task_history(
+scheduled_time_range_start => to_timestamp_ltz('2022-06-27 00:00:00.000 -0700'),
+scheduled_time_range_end => to_timestamp_ltz('2022-06-30 17:10:00.000 -0700')
+))
+order by scheduled_time;
+
+```
+
+```sql
+select * from
+table(information_schema.task_history(
+result_limit => 5
+))
+order by scheduled_time;
+
+```
+
+```sql
+select * from
+table(information_schema.task_history(
+scheduled_time_range_start => to_timestamp_ltz('2022-06-27 00:00:00.000 -0700'),
+scheduled_time_range_end => to_timestamp_ltz('2022-06-30 17:10:00.000 -0700'),
+result_limit => 2
+))
+order by scheduled_time;
+
+```
+
+```sql
+select * from
+table(information_schema.task_history(
+task_name => 'clear_ordering_customers'
+))
+order by scheduled_time;
+
+```
+
+```sql
+select * from
+table(information_schema.task_history(
+task_name => 'clear_ordering_customers',
+result_limit => 2
+))
+order by scheduled_time;
+
+```
