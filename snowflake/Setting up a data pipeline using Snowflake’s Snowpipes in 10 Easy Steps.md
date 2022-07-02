@@ -1,5 +1,8 @@
 # Setting up a data pipeline using Snowflake’s Snowpipes in 10 Easy Steps
 - https://calogica.com/sql/snowflake/2019/04/04/snowpipes.html
+- https://blog.vishnuvp.in/blog/automatic-data-ingestion-in-snowflake-using-snowpipe/
+- https://hevodata.com/learn/loading-data-to-snowflake/#2
+- 
 
 # Set up a separate database
 ```sql
