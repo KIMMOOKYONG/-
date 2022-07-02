@@ -1,3 +1,6 @@
+# 참고
+- https://superhky.tistory.com/241
+- 
 # 주식 가치 평가 방법
 - 현재 주가와 PER, EPS 이용해서 가치 평가
 - PER(price earning ratio) - 주가 수익 비율
