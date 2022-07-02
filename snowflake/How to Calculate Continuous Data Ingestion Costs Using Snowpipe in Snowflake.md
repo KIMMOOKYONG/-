@@ -35,3 +35,40 @@ create pipe stage.raw.mypipe
     file_format = (type = 'CSV' compression='GZIP');
 
 ```
+
+# Snowpipe Credit Trend & Load Latency Simulation Result
+## Copy History Query
+```sql
+select
+    pipe_name,
+    file_name,
+    status,
+    row_count,
+    file_size,
+    pipe_received_time ,
+    first_commit_time,
+    hour(pipe_received_time) as "nth hr",
+    minute(pipe_received_time) as "nth min",
+    round((file_size/(1000*1024)),2) as "size(mb)",
+    timediff(second,pipe_received_time,first_commit_time ) as "latency(s)"
+from snowflake.account_usage.copy_history
+
+```
+
+## Pipe Usage History Query
+```sql
+select
+    pipe_id,
+    pipe_name,
+    start_time,
+    end_time,
+    hour(start_time) as "nth hr",
+    minute(start_time) as "nth min" ,
+    credits_used,
+    bytes_inserted,
+    (bytes_inserted/(1000*1024)) as "size(mb)",
+    files_inserted
+from
+    snowflake.account_usage.pipe_usage_history
+
+```
