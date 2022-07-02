@@ -45,4 +45,6 @@ file_format = (type = 'JSON');
 ## Auto Ingest using Event Notification approach 
 ![image](https://user-images.githubusercontent.com/102650331/176987223-c5b73640-f772-4490-bb5b-fd5d67d402d7.png)
 
+## REST API approach
+
 
