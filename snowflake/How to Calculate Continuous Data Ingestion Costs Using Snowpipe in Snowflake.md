@@ -5,3 +5,33 @@
 # Snowpipe Auto Ingest Flow for Continuous Data Load
 ![image](https://user-images.githubusercontent.com/102650331/176987857-92e69263-a009-4e95-a26f-fa31d0790950.png)
 
+# Code Set
+## Integration object with cloud storage (Azure Blob)
+```sql
+create storage integration azure_int
+    type = external_stage
+storage_provider = azure
+    enabled = true
+ 	azure_tenant_id = '<tenant_id>'
+ 	storage_allowed_locations = ('azure://myaccount.blob.core.windows.net/mycontainer/path1/')
+
+```
+
+## Create external stage object
+```sql
+create stage my_blob_stage
+url = 'azure://blob_loccation/delta/'
+    storage_integration = azure_int
+
+```
+
+## Create pipe object
+```sql
+create pipe stage.raw.mypipe
+    auto_ingest=true as
+    copy into stage.raw.my_table
+    from
+@my_blob_stage/csv_files
+    file_format = (type = 'CSV' compression='GZIP');
+
+```
