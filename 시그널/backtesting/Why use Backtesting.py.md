@@ -202,3 +202,24 @@ stats = bt.run()
 bt.plot()
 
 ```
+
+# Take Profit and Stop Loss
+```python
+def next(self):
+        price = self.data.Close[-1]
+        if crossover(self.rsi, self.upper_bound):
+            self.position.close()
+        elif crossover(self.lower_bound, self.rsi):
+            # profit at 15% and a stop loss at 5%.
+            self.buy(tp = 1.15 * price, sl = 0.95 * price)
+
+```
+
+# Extracting Trade Data
+```python
+print(stats["_trades"].to_string())
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/181925071-ed97de25-28c0-4095-bcee-0211597364c5.png)
+
