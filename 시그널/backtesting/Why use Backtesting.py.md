@@ -129,4 +129,12 @@ def optim_func(series):
 
 ```
 
+```python
+stats = bt.optimize(
+        upper_bound = range(50,85,5),
+        lower_bound = range(15,45,5),
+        rsi_window = range(10,30,2),
+        maximize=optim_func)
+
+```
 
