@@ -138,3 +138,32 @@ stats = bt.optimize(
 
 ```
 
+# Parameter Heatmaps
+- which parameter combinations perform best
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+...
+class RsiOscillator(Strategy):
+    ...
+...
+
+bt = Backtest(GOOG, RsiOscillator, cash=10_000, commission=.002)
+
+stats, heatmap = bt.optimize(
+        upper_bound = range(50,85,5),
+        lower_bound = range(15,45,5),
+        rsi_window = range(10,30,2),
+        maximize='Equity Final [$]',
+        return_heatmap=True)
+
+# choose your colormaps from here
+# https://matplotlib.org/stable/tutorials/colors/colormaps.html
+hm = heatmap.groupby(["upper_bound","lower_bound"]).mean().unstack()
+sns.heatmap(hm, cmap="plasma")
+plt.show()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/181924528-12fd791f-c41c-42f2-898d-f3ddaed70ce8.png)
+
