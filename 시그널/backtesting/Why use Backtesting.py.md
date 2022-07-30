@@ -61,3 +61,13 @@ stats = bt.run()
 bt.plot()
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/181919786-eb8662c1-5512-4fec-890d-6e6fe3afe631.png)
+
+```python
+stats
+
+```
+![image](https://user-images.githubusercontent.com/102650331/181919823-62292b46-1ee1-45a3-8117-501a2a82f646.png)
+
+
