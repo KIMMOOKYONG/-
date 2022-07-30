@@ -81,6 +81,7 @@ stats=bt.run()
 위의 코드를 아래와 같이 변경
 ```python
 # maximize 변수는 stats dataframe에 정의된 지표값을 활용
+# optimizer는 값이 높은 것을 좋은 결과로 가정한다.
 
 stats = bt.optimize(
         upper_bound = range(50,85,5),
@@ -98,5 +99,34 @@ stats
 
 ```
 ![image](https://user-images.githubusercontent.com/102650331/181920159-eaecf6bb-5487-4d58-821f-09f28011857e.png)
+
+
+```python
+stats.keys()
+
+```
+![image](https://user-images.githubusercontent.com/102650331/181920549-4e5d5e86-b598-4068-8087-d81872dc2290.png)
+
+```python
+# stats 변수는 best performing set of parameters의 값을 가지고 있다.
+strategy = stats["_strategy"]
+strategy.upper_bound
+strategy.lower_bound
+
+```
+![image](https://user-images.githubusercontent.com/102650331/181920628-b9355499-6821-4f69-af0b-9fc7b32cba16.png)
+
+
+# Custom Optimization Functions
+```python
+def optim_func(series):
+    # 10번 이하의 거래면 백테스팅 case는 최적화 결과에서 제외
+    if series["# Trades"] < 10:
+        return -1
+    else:
+        # 얼마나 짧은 시간에 많은 수익을 창출했는지 측정
+        return series["Equity Final [$]"]/series["Exposure Time [%]"]
+
+```
 
 
