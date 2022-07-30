@@ -70,4 +70,33 @@ stats
 ```
 ![image](https://user-images.githubusercontent.com/102650331/181919823-62292b46-1ee1-45a3-8117-501a2a82f646.png)
 
+# Parameter optimization
+- 클래스 변수에 대해서 최적화를 수행한다.
+- grid-search to find the best portfolio for whatever metric you've defined.
+
+```python
+stats=bt.run()
+
+```
+위의 코드를 아래와 같이 변경
+```python
+# maximize 변수는 stats dataframe에 정의된 지표값을 활용
+
+stats = bt.optimize(
+        upper_bound = range(50,85,5),
+        lower_bound = range(15,45,5),
+        rsi_window = range(10,30,2),
+        maximize = "Equity Final [$]")
+
+```
+
+
+![image](https://user-images.githubusercontent.com/102650331/181920103-fd4fbc34-60eb-43bd-a5dd-d216490cb4b1.png)
+
+```python
+stats
+
+```
+![image](https://user-images.githubusercontent.com/102650331/181920159-eaecf6bb-5487-4d58-821f-09f28011857e.png)
+
 
