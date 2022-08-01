@@ -1,3 +1,6 @@
+# 참조
+- https://blog.quantinsti.com/turtle-trading-in-python/
+
 # 설치
 ```
 !pip install yfinance
