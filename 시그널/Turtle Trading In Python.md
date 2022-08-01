@@ -1,3 +1,9 @@
+# 설치
+```
+!pip install yfinance
+
+```
+
 # Import the necessary libraries
 ```python
 # To get closing price data
