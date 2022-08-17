@@ -215,6 +215,43 @@ TT_system
 ![image](https://user-images.githubusercontent.com/102650331/185089837-c6c37e8f-adf4-4512-b842-7b7251b44462.png)
 
 
+# run_simulation(df, system, update_func)
+```python
+# define run simulation function that stores results in a TimeFrame
+def run_simulation(df, system, update_func):
+    
+    # create a TimeFrame to keep track of financials over time
+    frame = TimeFrame(columns = system.financials.index)
+    frame.row[system.t_0] = system.financials
+    
+    # run the simluation for every day in the date range
+    for t in linrange(system.t_0, system.t_end):
+        frame.row[t+1] = update_func(df, frame.row[t], t, system)
+        
+    return frame
+
+```
+
+```python
+system.financials
+```
+![image](https://user-images.githubusercontent.com/102650331/185104428-7517ec1f-fa6d-4f26-808a-02d50e1fac01.png)
+
+
+```python
+frame = TimeFrame(columns = system.financials.index)
+frame
+```
+![image](https://user-images.githubusercontent.com/102650331/185104568-36754c53-22ec-4126-9146-1de7d881b166.png)
+
+
+```python
+frame.row[TT_system.t_0] = TT_system.financials
+frame.row[TT_system.t_0]
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185104673-8c09e84f-51fd-4343-97ec-84797ffd858c.png)
+
 
 
 
