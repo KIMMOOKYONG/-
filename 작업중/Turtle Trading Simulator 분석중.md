@@ -253,6 +253,88 @@ frame.row[TT_system.t_0]
 ![image](https://user-images.githubusercontent.com/102650331/185104673-8c09e84f-51fd-4343-97ec-84797ffd858c.png)
 
 
+```python
+update_func(TT_df, frame.row[0], 0, system)
 
+```
+
+```python
+# The update function takes the state during the current time step
+# and returns the state during the next time step.
+def update_func(df, state, t, system):
+
+    d = state.dollars
+    shares = state.shares
+    #current_price = state.current_price
+    x = state.x
+    exit_x = state.exit_x
+    status = state.status
+    entry_price = state.entry_price
+    exit_price = state.exit_price
+    add_unit_signal = system.add_unit_signal
+    
+    if t <= x+2:
+        
+        xdh = max(df['Close'][1:x])
+        xdl = min(df['Close'][1:x])
+        sma_x = df['SMA_x'][t]
+        atr = (xdh - xdl)/1.5
+        current_price = df['Close'][t]
+        
+    if t > x+2:
+        
+        xdh = max(df['Close'][t-x:t+1])
+        xdl = min(df['Close'][t-x:t+1])
+        sma_x = df['SMA_x'][t]
+        atr = (xdh - xdl)/1.5
+        current_price = df['Close'][t]
+        
+        # if you see the entry signal and you're out
+        if current_price >= xdh and status == 'out':
+            
+            entry_price = current_price
+            shares = (system.unit_size)//(entry_price)
+            d = d - ((system.unit_size)//(entry_price)) * entry_price
+            status = 'in'
+        
+        # if you see the add unit signal and you're already in
+        elif (status == 'in') and (current_price > (entry_price + (atr*add_unit_signal))) and (d > current_price):
+            
+            entry_price = current_price
+            shares = shares + (system.unit_size)//(entry_price)
+            d = d - ((system.unit_size)//(entry_price)) * entry_price
+            status = 'in'
+        
+        # if you're in and you see the exit signal
+        elif (current_price < (sma_x - (atr*exit_x))) and (status == 'in'):
+            
+            exit_price = current_price
+            d = d + (shares * exit_price)
+            shares = 0
+            status = 'out'
+        
+        # you're just cruisin
+        else:
+            
+            entry_price = entry_price
+            exit_price = exit_price
+            shares = shares
+            d = d
+        
+    return State(dollars = d,
+                 shares = shares,
+                 total_value = d + (shares*current_price),
+                 x_day_high = xdh,
+                 x_day_low = xdl,
+                 current_price = current_price,
+                 ATR = atr,
+                 SMA_x = sma_x,
+                 x = x,
+                 exit_x = exit_x,
+                 status = status,
+                 entry_price = entry_price,
+                 exit_price = exit_price)
+
+```
 
 
