@@ -163,8 +163,8 @@ create_state_object(investment_dollars, entry_signal, exit_signal)
 def make_system(df, state, starting_dollars,
                 unit_size, add_unit_signal):
     
-    return System(t_0 = get_first_label(df),
-                  t_end = get_last_label(df),
+    return System(t_0 = get_first_label(df),  # 시작 번호
+                  t_end = get_last_label(df), # 마지막 번호
                   starting_dollars = starting_dollars,
                   unit_size = starting_dollars*unit_size,
                   add_unit_signal = add_unit_signal,
@@ -204,6 +204,16 @@ TT_financial_state
 
 ```
 ![image](https://user-images.githubusercontent.com/102650331/185076048-eef3e963-cd01-408e-b90b-9c4e54ad58dc.png)
+
+```python
+# create system object
+TT_system = make_system(TT_df, TT_financial_state, investment_dollars,
+                     unit_size, add_unit_signal)
+TT_system
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185089837-c6c37e8f-adf4-4512-b842-7b7251b44462.png)
+
 
 
 
