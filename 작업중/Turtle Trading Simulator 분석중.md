@@ -12,7 +12,7 @@
 # yahoofinancials library
 !pip install yahoofinancials 
 
-!pip install modsim
+!pip install modsimpy
 
 ```
 # 라이브러리 로딩
