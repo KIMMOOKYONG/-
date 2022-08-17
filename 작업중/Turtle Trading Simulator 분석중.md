@@ -171,6 +171,58 @@ create_state_object(investment_dollars, entry_signal, exit_signal)
 ```
 ![image](https://user-images.githubusercontent.com/102650331/185069229-b67fac7d-fa91-4815-a1fc-0bc239937635.png)
 
+# 시스템 파라미터 생성(변경 안됨, 상수)
+```python
+# function that will create a system of parameters (that will not change during simulation)
+# Modeling and Simulation in Python
+# https://rpubs.com/zahirf/630705
+# https://greenteapress.com/modsimpy/ModSimPy3.pdf
+def make_system(df, state, starting_dollars,
+                unit_size, add_unit_signal):
+    
+    return System(t_0 = get_first_label(df),
+                  t_end = get_last_label(df),
+                  starting_dollars = starting_dollars,
+                  unit_size = starting_dollars*unit_size,
+                  add_unit_signal = add_unit_signal,
+                  entry_signal = state.x,
+                  exit_signal = state.exit_x,
+                  stock = get_first_value(df['stock']),
+                  financials = state)
+
+```
+
+# make_system 예시
+```python
+stock = 'GOOG'
+start_date = '2014-01-01'
+end_date = '2020-02-01'
+investment_dollars = 50000
+entry_signal = 55
+exit_signal = 1
+unit_size = 0.1
+add_unit_signal = .5
+
+```
+
+```python
+# create stock dataframe
+TT_df = create_stock_df(stock, start_date, end_date, entry_signal)
+TT_df
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185075865-dbfc323d-13b7-4aad-9eaa-98f3033b1855.png)
+
+
+```python
+# create financial state object
+TT_financial_state = create_state_object(investment_dollars, entry_signal, exit_signal)
+TT_financial_state
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185076048-eef3e963-cd01-408e-b90b-9c4e54ad58dc.png)
+
+
 
 
 
