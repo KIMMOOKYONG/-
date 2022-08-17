@@ -44,3 +44,57 @@ except ImportError:
     !pip install yahoofinancials   
     
 ```
+
+# 라이브러리 로딩
+```python
+from modsim import *
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import yfinance as yf
+from yahoofinancials import YahooFinancials
+
+```
+
+# 단일 종목 데이터프레임 생성
+```python
+# function that will create a dataframe for a single stock
+def create_stock_df(stock, start, end, SMA):
+    '''
+    stock(종목명), start(시작일), end(종료일), SMA(이동평균 기간)
+    '''
+    # get the data from yahoo finance
+    df = yf.download(stock, 
+                     start=start, 
+                     end=end, 
+                     progress=False)
+    
+    # add extra columns for day, stock title,
+    # simple moving average, and closing price average difference
+    df['day'] = range(1, len(df) + 1)
+    df['stock'] = stock
+    # 종가 칼럼을 기준으로 이동평균 계산
+    df['SMA_x'] = df.iloc[:,4].rolling(window=SMA).mean()
+    # 전일 종가
+    df['shifted_close'] = df['Close'].shift(1)
+    # 금일 종가와 전일 종가의 차이
+    df['close_difference'] = df['Close'] - df['shifted_close']
+    
+    # reset the index
+    df = df.reset_index()
+    
+    # return the dataframe
+    return df
+
+```
+
+# create_stock_df(stock, start, end, SMA) 호출 예시
+```python
+entry_signal = 55
+df = create_stock_df(stock, start_date, end_date, entry_signal)
+df
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185061789-fa9579a8-76b8-499e-b2a8-ea2f00a37e34.png)
+
+
