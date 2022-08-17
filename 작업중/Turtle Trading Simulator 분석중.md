@@ -131,3 +131,46 @@ plot_stock_price(df)
 ![image](https://user-images.githubusercontent.com/102650331/185068317-e9d56f91-d989-4a44-b3c1-ae9452021565.png)
 
 
+# state object 생성
+```python
+# create a function that defines a state object
+# for financial information that will change during simulation
+
+# input your:
+# 1. total dollars to invest
+# 2. your entry signal in days
+# 3. your exit signal (based on N, i.e. .5N)
+def create_state_object(dollars, entry, exit):
+
+    financial_state = State(dollars = dollars,
+                           shares = 0,
+                           total_value = dollars,
+                           x_day_high = 0,
+                           x_day_low = 0,
+                           current_price = 0,
+                           ATR = 0,
+                           SMA_x = 0,
+                           x = entry,
+                           exit_x = exit,
+                           status = 'out',
+                           entry_price = 0,
+                           exit_price = 0)
+    
+    return financial_state
+
+```
+
+# create_state_object(dollars, entry, exit) 호출 예시
+```python
+investment_dollars = 50000,
+entry_signal = 55,
+exit_signal = 1
+
+create_state_object(investment_dollars, entry_signal, exit_signal)
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185069229-b67fac7d-fa91-4815-a1fc-0bc239937635.png)
+
+
+
+
