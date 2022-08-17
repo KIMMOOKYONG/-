@@ -97,4 +97,37 @@ df
 ```
 ![image](https://user-images.githubusercontent.com/102650331/185061789-fa9579a8-76b8-499e-b2a8-ea2f00a37e34.png)
 
+# 종가 데이터 시각화
+```python
+# function to plot the stock dataframe's closing prices
+def plot_stock_price(df):
+    
+    x = df['Date']
+    y = df['Close']
+
+    # plotting the points  
+    plt.plot(x, y) 
+
+    # naming the axes 
+    plt.xlabel('date')
+    plt.ylabel('price/share')
+
+    # rotate the tick marks
+    plt.xticks(rotation=70)
+
+    # title
+    plt.title('Stock Price over time') 
+
+    # function to show the plot 
+    plt.show()
+
+```
+
+# plot_stock_price(df) 호출 예시
+```python
+plot_stock_price(df)
+
+```
+![image](https://user-images.githubusercontent.com/102650331/185068317-e9d56f91-d989-4a44-b3c1-ae9452021565.png)
+
 
