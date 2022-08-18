@@ -1,6 +1,5 @@
 # Turtle Trading Simulator 분석 중
 
-```
 # 모듈 설치
 ```python
 # install Pint if necessary
@@ -12,7 +11,9 @@
 # yahoofinancials library
 !pip install yahoofinancials 
 
+# 모델 시뮬레이팅 모듈
 !pip install modsimpy
+
 
 ```
 # 라이브러리 로딩
