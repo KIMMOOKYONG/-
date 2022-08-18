@@ -14,8 +14,12 @@
 # 모델 시뮬레이팅 모듈
 !pip install modsimpy
 
-
 ```
+![image](https://user-images.githubusercontent.com/102650331/185346222-978c3acb-a4a6-42f8-b3b9-5736a09fa308.png)
+
+![image](https://user-images.githubusercontent.com/102650331/185346277-b8ec5edc-5a78-4f90-9257-9463b1a9a3cf.png)
+
+
 # 라이브러리 로딩
 ```python
 from modsim import *
