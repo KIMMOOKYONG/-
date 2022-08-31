@@ -74,3 +74,13 @@ in the dimension table to maintain referential integrity.
 If it is failed, then the respective fact table data cannot be retrieved for that dimension key.
 
 ```
+
+## 2) Table Is Wide:
+```
+We can say that dimension tables are wide as we can add any number of attributes
+to a dimension table at any point in the DW cycle.
+DW architect will request the ETL team to add respective new attributes to the schema.
+
+In real-time scenarios, you can see dimension tables with 50 (or) more attributes.
+
+```
