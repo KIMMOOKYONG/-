@@ -138,7 +138,7 @@ To describe the business process, you can use plain text or use basic Business P
 
 ```
 
-## Step 2) Identify the Grain
+## Step 2) Identify the Grain(구축 목표)
 ```
 The Grain describes the level of detail for the business problem/solution.
 It is the process of identifying the lowest level of information for any table in your data warehouse.
