@@ -257,3 +257,24 @@ you can consider the order number, invoice number etc as degenerate dimension at
 ```
 ![image](https://user-images.githubusercontent.com/102650331/187678221-e6554b4d-64b6-43a2-a5ed-3dcf25646c79.png)
 
+
+## 6) Slowly Changing Dimensions
+```
+A slowly changing dimension is a kind where data can change slowly at any time rather than in periodic regular intervals.
+Modified data in dimension tables can be handled in different ways as explained below.
+
+You can select the SCD type to respond to a change individually for every attribute in a dimensional table.
+
+```
+
+### (i) Type 1 SCD
+```
+In type 1 when there is a change in the values of the dimensional attributes,
+the existing values are overwritten with the newly modified values which is nothing but an update.
+Old data is not maintained for historical reference.
+Past reports can’t be regenerated because of the non-existence of old data.
+Easy to maintain.
+The impact on fact tables is more.
+
+```
+
