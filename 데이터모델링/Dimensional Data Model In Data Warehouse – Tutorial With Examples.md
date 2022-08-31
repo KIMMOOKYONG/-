@@ -440,3 +440,25 @@ We should follow the above sequence in both cases because dimension tables
 and fact tables maintain referential integrity all the time.
 
 ```
+
+# Types Of Facts
+```
+Based on the behavior of fact tables data they are categorized as transaction fact tables,
+snapshot fact tables, and accumulated snapshot fact tables.
+All these three types follow different features with different data load strategies.
+
+```
+
+## 1) Transaction Fact Tables
+```
+As the name indicates transaction fact tables store transaction-level data for each event that happens.
+Such kind of data is easy to analyze at the fact table level itself. But for further analysis,
+you can also refer to the associated dimensions.
+
+For example,
+every sale (or) purchase happening from a marketing website should be loaded into a transaction fact table.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187681086-6163070c-8bc7-4531-9fe6-865b87c5b1fd.png)
+
