@@ -182,7 +182,7 @@ Finally all the dimensional attribute values get loaded with primary / surrogate
 The various types of Dimensions are listed below for your reference.
 
 ```
-##1) Small Dimensions
+## 1) Small Dimensions
 ```
 Small dimensions in data warehouse act as lookup tables with less number of rows and columns.
 Data into small dimensions can be easily loaded from spreadsheets.
@@ -199,4 +199,6 @@ as the attributes of date dimension such as year, month, week, days etc.
 communicate the same data in the same way across any number of facts.
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/187677059-69b9f27a-b55c-4c22-8135-cd9a10f5a6b8.png)
 
