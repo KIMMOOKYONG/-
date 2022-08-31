@@ -202,3 +202,25 @@ communicate the same data in the same way across any number of facts.
 
 ![image](https://user-images.githubusercontent.com/102650331/187677059-69b9f27a-b55c-4c22-8135-cd9a10f5a6b8.png)
 
+
+## 3) Junk Dimension
+```
+Few attributes in a fact table such as flags and indicators can be moved to a separate junk dimension table.
+These attributes do not belong to any other existing dimension tables as well.
+In general, the values of these attributes are simply a "yes/no" (or) "true/false".
+
+Creating a new dimension for every individual flag attribute makes it complex
+by creating more number of foreign keys to the fact table.
+
+At the same time, keeping all these flags and indicator information in fact tables 
+also increases the amount of data stored in facts which thereby degrades the performance.
+
+Hence the best solution for this is creating a single junk dimension as a junk dimension
+is capable of holding any number of "yes/no" or "true/false" indicators.
+However, junk dimensions store descriptive values for these indicators (yes/no (or) true/false)
+such as active & pending, etc.
+
+Based on the complexity of a fact table and it's indicators,
+a fact table can have one or more junk dimensions.
+
+```
