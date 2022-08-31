@@ -268,8 +268,11 @@ Multidimensional data model is generally categorized around a central theme and 
 ● A fact table is a primary table in a dimensional model.
 ● A dimension table contains dimensions of a fact.
 ● There are three types of facts 1. Additive 2. Non-additive 3. Semi- additive .
-● Types of Dimensions are Conformed, Outrigger, Shrunken, Role-playing, Dimension to Dimension Table, Junk, Degenerate, Swappable and Step Dimensions.
-● Five steps of Dimensional modeling are 1. Identify Business Process 2. Identify Grain (level of detail) 3. Identify Dimensions 4. Identify Facts 5. Build Star
-● For Dimensional modelling in data warehouse, there is a need to ensure that every fact table has an associated date dimension table.
+● Types of Dimensions are Conformed, Outrigger, Shrunken, Role-playing, Dimension
+to Dimension Table, Junk, Degenerate, Swappable and Step Dimensions.
+● Five steps of Dimensional modeling are 1. Identify Business Process 2.
+Identify Grain (level of detail) 3. Identify Dimensions 4. Identify Facts 5. Build Star
+● For Dimensional modelling in data warehouse, 
+there is a need to ensure that every fact table has an associated date dimension table.
 
 ```
