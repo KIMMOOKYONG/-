@@ -84,3 +84,53 @@ DW architect will request the ETL team to add respective new attributes to the s
 In real-time scenarios, you can see dimension tables with 50 (or) more attributes.
 
 ```
+
+## 3) Textual Attributes:
+```
+Dimensional attributes can be of any type as preferably text (or) numeric.
+Textual attributes will have real business words rather than codes.
+Dimension tables are not meant for calculations hence numeric values are rarely used
+for dimensional attributes.
+
+```
+
+## 4) Attributes May Not Be Directly Related:
+```
+All the attributes in a dimension table may not be related to one another.
+
+```
+
+## 5) Not Normalized:
+```
+Normalizing a dimension table brings more intermediary tables into the picture
+which is not efficient. Thus dimension tables are not normalized.
+
+Dimensional attributes can act as the source for constraints in queries and can also be displayed
+as labels in the reports.
+The queries will perform efficiently
+if you directly pick an attribute from the dimension table and refer directly
+to the respective fact table without touching any other intermediary tables.
+
+```
+
+## 6) Drilling Down and Rolling Up:
+```
+Dimension attributes have the capability to drill down (or) roll up the data whenever needed.
+
+```
+
+## 7) Multiple Hierarchies:
+```
+A single dimension table having multiple hierarchies is very common.
+A dimension table will have a simple hierarchy if only one path exists from the bottom level to the top.
+Similarly, it will have multiple hierarchies
+if there are multiple paths present to reach from the bottom level to the top.
+
+```
+
+## 8) Few Records:
+```
+Dimension tables will have less number of records (in hundreds) than the fact tables (in millions).
+Though they are smaller than the facts, they provide all the inputs to the fact tables.
+
+```
