@@ -55,3 +55,22 @@ Hence we should try to provide many attributes along with their respective value
 Let’s explore the structure of dimension tables!!
 
 ```
+
+## 1) Dimension Table Key:
+```
+Every Dimension table will have any one of its dimension attributes as a primary key 
+to uniquely identify each row.
+Hence the distinct numeric values of that attribute can act as primary keys.
+
+If the attribute values are not unique in any case,
+then you can consider sequentially generated system numbers as the primary keys.
+These are also called as Surrogate keys.
+
+Dimensional data models must have the referential integrity constraint
+for each key between dimensions and facts.
+Thus Fact tables will have a foreign key reference for each primary/surrogate key
+in the dimension table to maintain referential integrity.
+
+If it is failed, then the respective fact table data cannot be retrieved for that dimension key.
+
+```
