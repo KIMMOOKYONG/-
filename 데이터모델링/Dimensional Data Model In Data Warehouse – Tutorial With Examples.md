@@ -224,3 +224,23 @@ Based on the complexity of a fact table and it's indicators,
 a fact table can have one or more junk dimensions.
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/187677772-98c1d356-b334-4ae7-b2a7-e284a00c84f1.png)
+
+
+## 4) Role-Playing Dimension
+```
+A single dimension that can be referred for multiple purposes in a fact table
+is known as Role-playing dimension.
+
+The best example for a role-playing dimension is again a Date dimension table
+as the same date attribute in a dimension can be used for different purposes in a fact
+such as date of order, date of delivery, date of transaction, date of cancellation, etc.
+
+If necessary you can create four different views on the date dimension table
+with respect to four different date attributes of a fact table.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187677967-ebe3be0c-53be-4c08-807a-4bc4732bb955.png)
+
