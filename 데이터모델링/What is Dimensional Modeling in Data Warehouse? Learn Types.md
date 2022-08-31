@@ -121,3 +121,9 @@ Here are the steps to create Dimension Model
 
 ```
 
+```
+The model should describe the Why, How much, When/Where/Who and What of your business process
+
+```
+![image](https://user-images.githubusercontent.com/102650331/187611515-ac172314-b76f-4f57-b55b-ba6e38ea8825.png)
+
