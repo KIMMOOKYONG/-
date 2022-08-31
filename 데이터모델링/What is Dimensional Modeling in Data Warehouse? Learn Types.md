@@ -132,9 +132,11 @@ The model should describe the Why, How much, When/Where/Who and What of your bus
 Identifying the actual business process a data warehouse should cover.
 This could be Marketing, Sales, HR, etc. as per the data analysis needs of the organization.
 The selection of the Business process also depends on the quality of data available for that process.
-It is the most important step of the Data Modelling process, and a failure here would have cascading and irreparable defects.
+It is the most important step of the Data Modelling process, and a failure here would have cascading 
+and irreparable defects.
 
-To describe the business process, you can use plain text or use basic Business Process Modelling Notation (BPMN) or Unified Modelling Language (UML).
+To describe the business process, you can use plain text or 
+use basic Business Process Modelling Notation (BPMN) or Unified Modelling Language (UML).
 
 ```
 
@@ -146,8 +148,10 @@ If a table contains sales data for every day, then it should be daily granularit
 If a table contains total sales data for each month, then it has monthly granularity.
 
 During this stage, you answer questions like
-◎ Do we need to store all the available products or just a few types of products? This decision is based on the business processes selected for Datawarehouse
-◎ Do we store the product sale information on a monthly, weekly, daily or hourly basis? This decision depends on the nature of reports requested by executives
+◎ Do we need to store all the available products or just a few types of products?
+This decision is based on the business processes selected for Datawarehouse
+◎ Do we store the product sale information on a monthly, weekly, daily or hourly basis?
+This decision depends on the nature of reports requested by executives
 ◎ How do the above two choices affect the database size?
 
 ```
@@ -176,7 +180,8 @@ Hierarchies: For Location: Country, State, City, Street Address, Name
 
 ## Step 4) Identify the Fact
 ```
-This step is co-associated with the business users of the system because this is where they get access to data stored in the data warehouse.
+This step is co-associated with the business users of the system 
+because this is where they get access to data stored in the data warehouse.
 Most of the fact table rows are numerical values like price or cost per unit, etc.
 
 ```
@@ -189,7 +194,8 @@ The fact here is Sum of Sales by product by location by time.
 ```
 ## Step 5) Build Schema
 ```
-In this step, you implement the Dimension Model. A schema is nothing but the database structure (arrangement of tables). There are two popular schemas
+In this step, you implement the Dimension Model. A schema is nothing but the database structure (arrangement of tables).
+There are two popular schemas
 
 ```
 
