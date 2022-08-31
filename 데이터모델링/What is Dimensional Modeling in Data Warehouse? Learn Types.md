@@ -1,6 +1,6 @@
 # What is Dimensional Modeling in Data Warehouse? Learn Types
 # 참조
-[](https://www.guru99.com/dimensional-model-data-warehouse.html)
+![원문](https://www.guru99.com/dimensional-model-data-warehouse.html)
 
 # Dimensional Modeling
 ```
