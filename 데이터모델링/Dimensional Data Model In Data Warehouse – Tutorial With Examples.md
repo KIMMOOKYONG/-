@@ -278,3 +278,24 @@ The impact on fact tables is more.
 
 ```
 
+![image](https://user-images.githubusercontent.com/102650331/187678642-fb9e34c6-c88e-415a-a6ce-394a72f1b117.png)
+
+
+### (ii) Type 2 SCD
+```
+In type 2, when there is a change in the values of the dimensional attributes,
+a new row will be inserted with the modified values without changing the old row data.
+If there is any foreign key reference that exists to the old record in any of the fact tables,
+then the old surrogate key gets updated everywhere with a new surrogate key automatically.
+The impact on the fact table changes is very less with the above step.
+Old data is not considered anywhere after the changes.
+In type 2, we can track all the changes that are happening to the dimensional attributes.
+There is no limit on the storage of historical data.
+In type 2, adding few attributes to each row such as changed date, effective date-time, end date-time,
+the reason for the change and the current flag is optional.
+But this is significant if the business wants to know the number of changes made during a certain time period.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187678856-9604dc59-e9af-4787-9c4c-a33caf41fa01.png)
+
