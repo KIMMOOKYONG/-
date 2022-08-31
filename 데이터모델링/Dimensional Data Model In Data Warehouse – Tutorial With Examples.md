@@ -537,5 +537,6 @@ by looking at the below dimensional data modeling diagram for sales and orders.
 
 ```
 
-![image](https://user-images.githubusercontent.com/102650331/187682230-7cceb6f7-97de-4ab2-b05e-8757856da5fe.png)
+![image](https://user-images.githubusercontent.com/102650331/187682695-2cf51b52-7058-4a09-a94a-54c1d5af58f4.png)
+
 
