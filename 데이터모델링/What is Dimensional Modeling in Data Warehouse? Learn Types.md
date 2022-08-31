@@ -127,3 +127,83 @@ The model should describe the Why, How much, When/Where/Who and What of your bus
 ```
 ![image](https://user-images.githubusercontent.com/102650331/187611515-ac172314-b76f-4f57-b55b-ba6e38ea8825.png)
 
+## Step 1) Identify the Business Process
+```
+Identifying the actual business process a data warehouse should cover.
+This could be Marketing, Sales, HR, etc. as per the data analysis needs of the organization.
+The selection of the Business process also depends on the quality of data available for that process.
+It is the most important step of the Data Modelling process, and a failure here would have cascading and irreparable defects.
+
+To describe the business process, you can use plain text or use basic Business Process Modelling Notation (BPMN) or Unified Modelling Language (UML).
+
+```
+
+## Step 2) Identify the Grain
+```
+The Grain describes the level of detail for the business problem/solution.
+It is the process of identifying the lowest level of information for any table in your data warehouse.
+If a table contains sales data for every day, then it should be daily granularity.
+If a table contains total sales data for each month, then it has monthly granularity.
+
+During this stage, you answer questions like
+◎ Do we need to store all the available products or just a few types of products? This decision is based on the business processes selected for Datawarehouse
+◎ Do we store the product sale information on a monthly, weekly, daily or hourly basis? This decision depends on the nature of reports requested by executives
+◎ How do the above two choices affect the database size?
+
+```
+### Example of Grain:
+```
+The CEO at an MNC wants to find the sales for specific products in different locations on a daily basis.
+So, the grain is product sale information by location by the day.
+
+```
+
+## Step 3) Identify the Dimensions
+```
+Dimensions are nouns like date, store, inventory, etc.
+These dimensions are where all the data should be stored.
+For example, the date dimension may contain data like a year, month and weekday.
+
+```
+### Example of Dimensions:
+```
+The CEO at an MNC wants to find the sales for specific products in different locations on a daily basis.
+Dimensions: Product, Location and Time
+Attributes: For Product: Product key (Foreign Key), Name, Type, Specifications
+Hierarchies: For Location: Country, State, City, Street Address, Name
+
+```
+
+## Step 4) Identify the Fact
+```
+This step is co-associated with the business users of the system because this is where they get access to data stored in the data warehouse.
+Most of the fact table rows are numerical values like price or cost per unit, etc.
+
+```
+
+### Example of Facts:
+```
+The CEO at an MNC wants to find the sales for specific products in different locations on a daily basis.
+The fact here is Sum of Sales by product by location by time.
+
+```
+## Step 5) Build Schema
+```
+In this step, you implement the Dimension Model. A schema is nothing but the database structure (arrangement of tables). There are two popular schemas
+
+```
+
+### Star Schema
+```
+The star schema architecture is easy to design.
+It is called a star schema because diagram resembles a star, with points radiating from a center.
+The center of the star consists of the fact table, and the points of the star is dimension tables.
+The fact tables in a star schema which is third normal form whereas dimensional tables are de-normalized.
+```
+
+### Snowflake Schema
+```
+The snowflake schema is an extension of the star schema.
+In a snowflake schema, each dimension are normalized and connected to more dimension tables.
+
+```
