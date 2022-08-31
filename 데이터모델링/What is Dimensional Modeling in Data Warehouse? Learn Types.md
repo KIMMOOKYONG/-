@@ -25,7 +25,7 @@ In this tutorial, you will learn
 
 ```
 
--Elements of Dimensional Data Model
+- Elements of Dimensional Data Model
     - Fact
     - Dimension
     - Attributes
