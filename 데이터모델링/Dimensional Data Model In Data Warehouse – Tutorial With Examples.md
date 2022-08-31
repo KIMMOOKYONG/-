@@ -244,3 +244,16 @@ with respect to four different date attributes of a fact table.
 
 ![image](https://user-images.githubusercontent.com/102650331/187677967-ebe3be0c-53be-4c08-807a-4bc4732bb955.png)
 
+
+## 5) Degenerate Dimensions
+```
+There may be few attributes that can be neither dimensions (metrics) nor facts (measures)
+but they need for analysis.
+All such attributes can be moved into degenerate dimensions.
+
+For example,
+you can consider the order number, invoice number etc as degenerate dimension attributes.
+
+```
+![image](https://user-images.githubusercontent.com/102650331/187678221-e6554b4d-64b6-43a2-a5ed-3dcf25646c79.png)
+
