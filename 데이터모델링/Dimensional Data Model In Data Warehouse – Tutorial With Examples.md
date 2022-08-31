@@ -153,12 +153,23 @@ However, an ETL system without any external processing is more suitable to creat
 
 ```
 
+# The Basic Load Plan For A Dimension
+```
+Dimensions can be created in two ways i.e.
+By extracting the dimension data from external source systems (or)
+The ETL system can build the dimensions from staging without involving any external sources.
+However, an ETL system without any external processing is more suitable to create dimension tables.
+
+```
+
 ## Below are the steps involved in this process:
 ```
 ● Data Cleaning:
-Data is cleaned, validated and business rules are applied before loading into the dimension table to maintain consistency.
+Data is cleaned, validated and business rules are applied before loading into the dimension table
+to maintain consistency.
 ● Data Conforming:
-Data from other parts of the data warehouse should be properly aggregated as a single value, with respect to each field of the dimension table.
+Data from other parts of the data warehouse should be properly aggregated as a single value,
+with respect to each field of the dimension table.
 ● Share the same Domains:
 Once the data is confirmed it is stored again in staging tables.
 ● Data Delivery:
