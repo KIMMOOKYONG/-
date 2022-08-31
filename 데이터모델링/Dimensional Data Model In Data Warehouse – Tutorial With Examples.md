@@ -462,3 +462,80 @@ every sale (or) purchase happening from a marketing website should be loaded int
 
 ![image](https://user-images.githubusercontent.com/102650331/187681086-6163070c-8bc7-4531-9fe6-865b87c5b1fd.png)
 
+
+## 2) Periodic Snapshot Fact Tables
+```
+As the name indicates data in periodic snapshot fact table is
+stored in the form of snapshots (pictures) at periodic intervals
+such as for every day, week, month, quarter etc depending on the business needs.
+
+So it is clear that this is an aggregation of data all the time.
+Hence snapshot facts are more complex compared to transaction fact tables.
+For example, any performance revenue reports data can be stored in snapshot fact tables for easy reference.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187681397-4f8992cd-b075-4385-9e2c-a086b3a8c1f2.png)
+
+## 3) Accumulating Snapshot Fact Tables
+```
+Accumulating snapshot fact tables allow you to store data into tables for the entire lifetime of a product.
+This acts as a combination of the above two types where data can be inserted
+by any event at any time as a snapshot.
+
+In this type, 
+additional date columns and data for each row gets updated with every milestone of that product.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187681546-1427dd96-0a95-402b-b931-a61934ae4a80.png)
+
+
+```
+In addition to the above three types, here are a few other types of fact tables:
+
+```
+
+## 4) Factless Fact Tables:
+A fact is a collection of measures whereas fact less captures only events (or) conditions
+that do not contain any measures. A fact-less fact table is mainly used to track a system.
+The data in these tables can be analyzed and used for reporting.
+
+For example,
+you can look for details of an employee who has taken leave and the type of leave in a year, etc.
+Including all these non-clear fact details in a fact, the table will definitely increase the size of facts.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187681793-a10ecc63-e2b4-439f-9d26-36e55fd3b89d.png)
+
+## 5) Conformed Fact Tables:
+```
+A conformed fact is a fact which can be referred in the same way with every data mart it is related to.
+
+```
+
+# Specifications Of A Fact Table
+```
+Given below are the specifications of a Fact Table.
+
+● Fact name: This is a string that describes the functionality of the fact table in brief.
+● Business process: Talks about the business need to be fulfilled by that fact table.
+● Questions: Mentions a list of business questions that will be answered by that fact table.
+● Grain: Indicates the lowest level of detail associated with that fact table data.
+● Dimensions: List out all the dimension tables associated with that fact table.
+● Measures: The calculated values stored in the fact table.
+● Load frequency Represents the time intervals to load data into the fact table.
+● Initial rows: Refer to the initial data populated in the fact table for the first time.
+
+```
+
+# Example Of Dimensional Data Modeling
+```
+You can get an idea of how dimension tables and fact tables can be designed for a system
+by looking at the below dimensional data modeling diagram for sales and orders.
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/187682230-7cceb6f7-97de-4ab2-b05e-8757856da5fe.png)
+
