@@ -62,3 +62,62 @@ In other words, a dimension is a window to view information in the facts.
 
 ```
 
+## Attributes
+```
+The Attributes are the various characteristics of the dimension in dimensional data modeling.
+In the Location dimension, the attributes can be
+◎ State
+◎ Country
+◎ Zipcode etc.
+Attributes are used to search, filter, or classify facts. Dimension Tables contain Attributes
+
+```
+## Fact Table
+```
+A fact table is a primary table in dimension modelling.
+◎ A Fact Table contains
+◎ Measurements/facts
+Foreign key to dimension table
+
+```
+## Dimension Table
+```
+◎ A dimension table contains dimensions of a fact.
+◎ They are joined to fact table via a foreign key.
+◎ Dimension tables are de-normalized tables.
+◎ The Dimension Attributes are the various columns in a dimension table
+◎ Dimensions offers descriptive characteristics of the facts with the help of their attributes
+◎ No set limit set for given for number of dimensions
+◎ The dimension can also contain one or more hierarchical relationships
+
+```
+
+# Types of Dimensions in Data Warehouse
+```
+Following are the Types of Dimensions in Data Warehouse:
+
+◎ Conformed Dimension
+◎ Outrigger Dimension
+◎ Shrunken Dimension
+◎ Role-playing Dimension
+◎ Dimension to Dimension Table
+◎ Junk Dimension
+◎ Degenerate Dimension
+◎ Swappable Dimension
+◎ Step Dimension
+
+```
+
+# Steps of Dimensional Modelling
+```
+The accuracy in creating your Dimensional modeling determines the success of your data warehouse implementation.
+Here are the steps to create Dimension Model
+
+◎ Identify Business Process
+◎ Identify Grain (level of detail)
+◎ Identify Dimensions
+◎ Identify Facts
+◎ Build Star
+
+```
+
