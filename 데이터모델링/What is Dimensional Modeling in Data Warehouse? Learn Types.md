@@ -54,10 +54,11 @@ Dimension provides the context surrounding a business process event.
 In simple terms, they give who, what, where of a fact.
 In the Sales business process, for the fact quarterly sales number, dimensions would be
 
-- Who – Customer Names
-- Where – Location
-- What – Product Name
+◎ Who – Customer Names
+◎ Where – Location
+◎ What – Product Name
 
 In other words, a dimension is a window to view information in the facts.
 
 ```
+
