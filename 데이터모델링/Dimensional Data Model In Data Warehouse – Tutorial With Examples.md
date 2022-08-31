@@ -137,3 +137,9 @@ Though they are smaller than the facts, they provide all the inputs to the fact 
 
 ![image](https://user-images.githubusercontent.com/102650331/187675522-c7a45d6c-fb6b-4c96-b550-786ff4f5b722.png)
 
+```
+By understanding the above concepts,
+you can decide if a data field can act as a dimension attribute (or) not while extracting the data
+from the source itself.
+
+```
