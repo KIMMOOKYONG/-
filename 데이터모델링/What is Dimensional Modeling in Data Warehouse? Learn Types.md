@@ -213,3 +213,63 @@ The snowflake schema is an extension of the star schema.
 In a snowflake schema, each dimension are normalized and connected to more dimension tables.
 
 ```
+
+# Rules for Dimensional Modelling
+```
+Following are the rules and principles of Dimensional Modeling:
+
+● Load atomic data into dimensional structures.
+● Build dimensional models around business processes.
+● Need to ensure that every fact table has an associated date dimension table.
+● Ensure that all facts in a single fact table are at the same grain or level of detail.
+● It’s essential to store report labels and filter domain values in dimension tables
+● Need to ensure that dimension tables use a surrogate key
+● Continuously balance requirements and realities to deliver business solution to support their decision-making
+
+```
+
+# Benefits of Dimensional Modeling
+```
+● Standardization of dimensions allows easy reporting across areas of the business.
+● Dimension tables store the history of the dimensional information.
+● It allows to introduce entirely new dimension without major disruptions to the fact table.
+● Dimensional also to store data in such a fashion that it is easier 
+to retrieve the information from the data once the data is stored in the database.
+● Compared to the normalized model dimensional table are easier to understand.
+● Information is grouped into clear and simple business categories.
+● The dimensional model is very understandable by the business.
+This model is based on business terms, so that the business knows what each fact, dimension, or attribute means.
+● Dimensional models are deformalized and optimized for fast data querying.
+Many relational database platforms recognize this model and optimize query execution plans to aid in performance.
+● Dimensional modelling in data warehouse creates a schema which is optimized for high performance.
+It means fewer joins and helps with minimized data redundancy.
+● The dimensional model also helps to boost query performance.
+It is more denormalized therefore it is optimized for querying.
+● Dimensional models can comfortably accommodate change.
+Dimension tables can have more columns added 
+to them without affecting existing business intelligence applications using these tables.
+
+```
+
+# What is Multi-Dimensional Data Model in Data Warehouse?
+```
+Multidimensional data model in data warehouse is a model which represents data in the form of data cubes.
+It allows to model and view the data in multiple dimensions and it is defined by dimensions and facts.
+Multidimensional data model is generally categorized around a central theme and represented by a fact table.
+
+```
+
+# Summary:
+```
+● A dimensional model is a data structure technique optimized for Data warehousing tools.
+● Facts are the measurements/metrics or facts from your business process.
+● Dimension provides the context surrounding a business process event.
+● Attributes are the various characteristics of the dimension modelling.
+● A fact table is a primary table in a dimensional model.
+● A dimension table contains dimensions of a fact.
+● There are three types of facts 1. Additive 2. Non-additive 3. Semi- additive .
+● Types of Dimensions are Conformed, Outrigger, Shrunken, Role-playing, Dimension to Dimension Table, Junk, Degenerate, Swappable and Step Dimensions.
+● Five steps of Dimensional modeling are 1. Identify Business Process 2. Identify Grain (level of detail) 3. Identify Dimensions 4. Identify Facts 5. Build Star
+● For Dimensional modelling in data warehouse, there is a need to ensure that every fact table has an associated date dimension table.
+
+```
