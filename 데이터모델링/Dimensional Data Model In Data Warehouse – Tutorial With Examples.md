@@ -177,3 +177,26 @@ Finally all the dimensional attribute values get loaded with primary / surrogate
 
 ```
 
+# Types Of Dimensions
+```
+The various types of Dimensions are listed below for your reference.
+
+```
+##1) Small Dimensions
+```
+Small dimensions in data warehouse act as lookup tables with less number of rows and columns.
+Data into small dimensions can be easily loaded from spreadsheets.
+If required small dimensions can be combined as a super dimension.
+
+```
+
+## 2) Conformed Dimension
+```
+A conformed dimension is a dimension that can be referred
+in the same way with every fact table it is related.
+Date dimension is the best example of a conformed dimension 
+as the attributes of date dimension such as year, month, week, days etc.
+communicate the same data in the same way across any number of facts.
+
+```
+
