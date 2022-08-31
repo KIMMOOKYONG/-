@@ -134,3 +134,6 @@ Dimension tables will have less number of records (in hundreds) than the fact ta
 Though they are smaller than the facts, they provide all the inputs to the fact tables.
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/187675522-c7a45d6c-fb6b-4c96-b550-786ff4f5b722.png)
+
