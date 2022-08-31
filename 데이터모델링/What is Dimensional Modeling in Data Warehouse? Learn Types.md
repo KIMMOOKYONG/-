@@ -1,4 +1,7 @@
 # What is Dimensional Modeling in Data Warehouse? Learn Types
+# 참조
+[](https://www.guru99.com/dimensional-model-data-warehouse.html)
+
 # Dimensional Modeling
 ```
 Dimensional Modeling (DM) is a data structure technique optimized for data storage in a Data warehouse.
