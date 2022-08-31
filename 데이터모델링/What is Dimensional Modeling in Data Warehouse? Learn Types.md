@@ -41,3 +41,23 @@ In this tutorial, you will learn
 - Rules for Dimensional Modelling
 - Benefits of Dimensional Modeling
 
+# Elements of Dimensional Data Model
+## Fact
+```
+Facts are the measurements/metrics or facts from your business process.
+For a Sales business process, a measurement would be quarterly sales number
+
+```
+## Dimension
+```
+Dimension provides the context surrounding a business process event.
+In simple terms, they give who, what, where of a fact.
+In the Sales business process, for the fact quarterly sales number, dimensions would be
+
+- Who – Customer Names
+- Where – Location
+- What – Product Name
+
+In other words, a dimension is a window to view information in the facts.
+
+```
