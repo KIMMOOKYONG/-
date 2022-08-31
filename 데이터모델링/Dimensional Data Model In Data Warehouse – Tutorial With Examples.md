@@ -46,6 +46,7 @@ Given below are some of the existing dimensional data modeling myths.
 ● We can't integrate the dimensional data models.
 
 ```
+
 # Dimension Tables
 ```
 Dimension tables play a key role in the DW system by storing all the analyzed metric values.
@@ -182,6 +183,7 @@ Finally all the dimensional attribute values get loaded with primary / surrogate
 The various types of Dimensions are listed below for your reference.
 
 ```
+
 ## 1) Small Dimensions
 ```
 Small dimensions in data warehouse act as lookup tables with less number of rows and columns.
@@ -255,6 +257,7 @@ For example,
 you can consider the order number, invoice number etc as degenerate dimension attributes.
 
 ```
+
 ![image](https://user-images.githubusercontent.com/102650331/187678221-e6554b4d-64b6-43a2-a5ed-3dcf25646c79.png)
 
 
@@ -415,6 +418,7 @@ If in case a single load fails, then the entire data can be easily reloaded (or)
 it can get continued from where it is left off with the bulk load.
 
 ```
+
 ## 6) Deleting A Fact Record
 ```
 Deleting a fact table record happens only if the business wants explicitly.
@@ -497,6 +501,7 @@ In addition to the above three types, here are a few other types of fact tables:
 ```
 
 ## 4) Factless Fact Tables:
+```
 A fact is a collection of measures whereas fact less captures only events (or) conditions
 that do not contain any measures. A fact-less fact table is mainly used to track a system.
 The data in these tables can be analyzed and used for reporting.
