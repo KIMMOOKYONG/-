@@ -364,3 +364,79 @@ In a dimensional model, the fact tables maintain many-to-many relation with dime
 ![image](https://user-images.githubusercontent.com/102650331/187679690-58a975ce-a8aa-41e2-aff3-4e2033aa0dc2.png)
 
 
+# Load Plan For Fact Tables
+```
+You can load a fact table data efficiently by considering the following pointers:
+
+```
+
+## 1) Drop And Restore Indexes
+```
+Indexes in fact tables are good performance boosters while querying the data,
+but they demolish the performance while loading the data.
+Hence, before loading any huge data into fact tables primarily drop all the indexes on that table,
+load the data and restore the indexes.
+
+```
+
+## 2) Separate Inserts From Updates
+```
+Do not merge insert and update records while loading into a fact table.
+If the number of updates is less, then process inserts, and updates separately.
+If the number of updates is more then it is advisable to truncate and reload the fact table for quick results.
+
+```
+## 3) Partitioning
+```
+Do the partitioning physically on a fact table into mini tables for better query performance 
+on bulk fact table’s data.
+Except for the DBAs and the ETL team no one will be aware of the partitions on facts.
+
+As an example,
+you can partition a table month-wise, quarter wise, year-wise, etc.
+While querying, only the partitioned data is considered instead of scanning the entire table.
+
+```
+
+## 4) Load In Parallel
+```
+We have now got an idea about partitions on fact tables.
+Partitions on facts are also beneficial while loading huge data into facts.
+To do this, first, break the data logically into different data files and run the ETL jobs
+to load all these logical portions of data in parallel.
+
+```
+##5) Bulk Load Utility
+```
+Unlike other RDBMS systems,
+ETL system does not need to maintain rollback logs explicitly for mid-transaction failures.
+Here "bulk loads" happen into facts instead of "SQL inserts" to load huge data.
+If in case a single load fails, then the entire data can be easily reloaded (or)
+it can get continued from where it is left off with the bulk load.
+
+```
+## 6) Deleting A Fact Record
+```
+Deleting a fact table record happens only if the business wants explicitly.
+If there is any fact table data that no longer exists in the source systems 
+then that respective data can be deleted either physically (or) logically.
+
+Physical delete: Unwanted records are removed from the fact table permanently.
+Logical delete: A new column will be added to the fact table such as "deleted" of Bit (or) Boolean type.
+This acts as a flag to represent the deleted records.
+You must ensure that you are not selecting the deleted records while querying the fact table data.
+
+```
+
+## 7) Sequence For Updates And Deletes In A Fact Table
+```
+When there is any data to be updated,
+the dimension tables should get updated first followed by updating the surrogate keys
+in the lookup table if necessary and after that the respective fact table updates.
+Deletion happens in reverse because deleting all unwanted data from fact tables makes easy
+to delete the linked unwanted data from the dimension tables.
+
+We should follow the above sequence in both cases because dimension tables
+and fact tables maintain referential integrity all the time.
+
+```
