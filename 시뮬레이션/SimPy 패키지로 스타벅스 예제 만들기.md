@@ -100,3 +100,20 @@ def wait_for_coffee(self, name):
 음료를 제조하는 직원은 충분히 많기 때문에 wait_for_coffee 함수에서는 직원을 요청하는 부분을 제외한다.  
 커피를 준비하는 30초가 지나면 고객ID, 제조가 완료된 시간, "커피수령" 값이 함께 출력된다.  
 
+
+## 2.5 Simulator 실행하는 부분
+```python
+print("Starbucks_Example-01")
+
+env = simpy.Environment()
+staff = simpy.Resource(env, capacity=2)
+customer = Customer(env, 10)
+
+env.run()
+
+```
+env 객체를 생성해주고, 주문받는 직원 2명을 생성한다.  
+Customer 클래스에 env와 총 고객 수를 파라미터로 입력하여 customer 객체를 생성한 후,  
+run 함수를 이용하여 실행한다.  
+run()의 until 파라미터에 시간 값을 입력하여 총 수행 시간을 조정할 수도 있다.  
+
