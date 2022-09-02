@@ -176,3 +176,10 @@ env.run()
 ![image](https://user-images.githubusercontent.com/102650331/188169715-e1981327-f32f-4c54-a6f7-1ef83c78b2f4.png)
 
 
+# Starbucks-01 시뮬레이션 예제 수행 결과 정리
+![image](https://user-images.githubusercontent.com/102650331/188170107-6fa9ce3e-ba68-45d2-88cf-0b089b5bd6a1.png)
+
+![image](https://user-images.githubusercontent.com/102650331/188170167-32b70056-f25a-4b37-8527-977500786d43.png)
+
+![image](https://user-images.githubusercontent.com/102650331/188170287-4c9eb8de-f931-4179-afa9-4e905eb1b231.png)
+
