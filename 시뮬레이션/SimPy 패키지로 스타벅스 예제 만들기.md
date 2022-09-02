@@ -60,4 +60,28 @@ self.number 값만큼의 인원이 스타벅스에 온다.
 고객 도착 시간에 상수 값이 아닌 분포를 적용하고 싶다면  
 interval_time 변수에 random.expovaiate(1.0/3) 이런 식으로 분포를 넣어주면 된다.  
 
+```python
+def order_coffee(self, name, staff):
+    # 직원 요청
+    with staff.request() as req:
+        yield req
+
+        # 직원에게 30초동안 주문
+        ordering_duration = 30
+        yield self.env.timeout(ordering_duration)
+        print(name, "%8.3f" % self.env.now, "주문완료")
+
+    # 주문한 고객은 커피 수령을 위해 대기
+    yield self.env.process(self.wait_for_coffee(name))
+
+```
+staff변수는 주문을 받는 직원 수를 의미한다.  
+고객은 커피 주문을 위해 직원을 요청하는데, 이는 with staff.request() as req: yield req로 표현한다.  
+위처럼 with 구문을 쓰면, 직원은 자동적으로 점유 상태에서 해제된다.  
+즉, 앞 고객의 주문이 끝나서, 커피 주문을 받을 수 있는 직원이 생기면, 바로 다음 고객의 주문을 받을 수 있게 된다는 의미이다.  
+만약 request()를 with 없이 쓰는 경우는, release()를 사용하여 직접 자원(여기서는 직원)을 해제해야 한다.  
+
+고객에게 직원이 할당되면, 고객은 30초 동안 커피 주문을 하고,  
+주문이 완료되면 고객 ID, 완료된 시간, "주문완료" 값을 함께 출력한다.  
+주문 후 wait_for_coffee 함수가 실행되도록 해서, 주문이 끝난 고객이 음료가 제조되기를 기다리는 상황을 표현하면 된다.  
 
