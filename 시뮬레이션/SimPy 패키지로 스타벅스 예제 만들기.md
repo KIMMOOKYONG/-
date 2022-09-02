@@ -60,6 +60,7 @@ self.number 값만큼의 인원이 스타벅스에 온다.
 고객 도착 시간에 상수 값이 아닌 분포를 적용하고 싶다면  
 interval_time 변수에 random.expovaiate(1.0/3) 이런 식으로 분포를 넣어주면 된다.  
 
+## 2.3 order_coffee 함수
 ```python
 def order_coffee(self, name, staff):
     # 직원 요청
