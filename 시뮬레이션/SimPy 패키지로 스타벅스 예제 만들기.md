@@ -36,7 +36,7 @@ order_coffee 함수는 커피 주문,
 wait_for_coffee 함수는 커피를 수령을 위해 대기하는 행동과 관련되어 있다.
 
 ## 2.2 customer_generate 함수
-```
+```python
 def customer_generate(self):
     for i in range(self.number):
         name = "Customer-%s" % i
