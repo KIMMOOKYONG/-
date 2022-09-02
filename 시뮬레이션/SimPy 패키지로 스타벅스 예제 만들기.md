@@ -173,4 +173,6 @@ customer = Customer(env, 10)
 env.run()
 
 ```
+![image](https://user-images.githubusercontent.com/102650331/188169715-e1981327-f32f-4c54-a6f7-1ef83c78b2f4.png)
+
 
