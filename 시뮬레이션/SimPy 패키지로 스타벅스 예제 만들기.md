@@ -87,3 +87,16 @@ staff변수는 주문을 받는 직원 수를 의미한다.
 주문 후 wait_for_coffee 함수가 실행되도록 해서, 주문이 끝난 고객이 음료가 제조되기를 기다리는 상황을 표현하면 된다.  
 
 
+## 2.4 wait_for_coffee 함수
+```python
+def wait_for_coffee(self, name):
+    # 30초 대기 후 커피 수령
+    waiting_duration = 30
+    yield(self.env.timeout(waiting_duration))
+    print(name, "%8.3f" % self.env.now, "커피수령")
+
+```
+주문 받는 직원은 2명이고,  
+음료를 제조하는 직원은 충분히 많기 때문에 wait_for_coffee 함수에서는 직원을 요청하는 부분을 제외한다.  
+커피를 준비하는 30초가 지나면 고객ID, 제조가 완료된 시간, "커피수령" 값이 함께 출력된다.  
+
