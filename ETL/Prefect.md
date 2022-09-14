@@ -82,3 +82,66 @@ Among other things, it contains fake data for ten users:
 
 ![image](https://user-images.githubusercontent.com/102650331/190069327-5b0622ab-2103-47b2-833b-bc787f73e4c0.png)
 
+
+```
+Lets start by creating a Python file — I've named mine 01_etl_pipeline.py.
+Also, make sure to have a folder where extracted and transformed data will be saved.
+I've called it data, and it's located right where the Python scripts are.
+
+Any ETL pipeline needs three functions implemented — for extracting,
+transforming, and loading the data.
+Here's what these functions will do in our case:
+- extract(url: str) -> dict — makes a GET request to the url parameter.
+Tests to see if some data was returned — in that case, it is returned as a dictionary.
+Otherwise, an exception is raised.
+- transform(data: dict) -> pd.DataFrame — transforms 
+the data so only specific attributes are kept:
+ID, name, username, email, address, phone number, and company.
+Returns the transformed data as a Pandas DataFrame.
+- load(data: pd.DataFrame, path: str) -> None — saves the previously 
+transformed data to a CSV file at path.
+We'll also append a timestamp to the file name,
+so the files don’t get overwritten.
+
+After function declaration, all three are called when the Python script is executed.
+Here's the complete code snippet:
+
+```
+
+```python
+import json
+import requests
+import pandas as pd
+from datetime import datetime
+
+def extract(url: str) -> dict:
+    res = requests.get(url)
+    if not res:
+        raise Exception("No data fetched!")
+    return json.loads(res.content)
+
+def transform(data: dict) -> pd.DataFrame:
+    transformed = []
+    for user in data:
+        transformed.append({
+            "ID": user["id"],
+            "Name": user["name"],
+            "Username": user["username"],
+            "Email": user["email"],
+            "Address": f"{user["address"]["street"]}, {user["address"]["suite"]}, {user["address"]["city"]}",
+            "PhoneNumber": user["phone"],
+            "Company": user["company"]["name"]
+        })
+    return pd.DataFrame(transformed)
+
+def load(data: pd.DataFrame, path: str) -> None:
+    data.to_csv(path_or_buf=path, index=False)
+
+
+if __name__ == "__main__":
+    users = extract(url="https://jsonplaceholder.typicode.com/users")
+    df_users = transform(users)
+    load(data=df_users, path=f"data/users_{int(datetime.now().timestamp())}.csv")
+
+```
+
