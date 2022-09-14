@@ -145,3 +145,15 @@ if __name__ == "__main__":
 
 ```
 
+```
+You can now run the script by executing the following from the Terminal:
+
+python 01_etl_pipeline.py
+
+You shouldn't see any output if everything ran correctly.
+However, you should see CSV file(s) in the data folder (I've run the file twice):
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/190070390-5babf4e0-c96b-42bb-8501-ba669e269307.png)
+
