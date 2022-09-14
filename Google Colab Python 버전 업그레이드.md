@@ -18,3 +18,6 @@
 !python --version
 
 ```
+
+![image](https://user-images.githubusercontent.com/102650331/190092791-925646b0-57e6-4d9f-b762-bb3747e559fc.png)
+
