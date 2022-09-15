@@ -9,5 +9,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-```
+# REPLACE : PK가 동일할 경우 덮어쓴다.
+# IGNORE 1 LINES : header column을 무시한다.
 
+```
