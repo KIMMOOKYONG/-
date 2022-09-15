@@ -13,3 +13,12 @@ IGNORE 1 LINES;
 # IGNORE 1 LINES : header column을 무시한다.
 
 ```
+# test.csv
+```
+1000,"hana"
+1001,"hanajava"
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/190417290-e0663f07-7b66-448c-a75b-494c1e174d09.png)
+
