@@ -62,3 +62,45 @@ csv_to_mysql(load_query, host, user, password)
 
 ```
 
+# CSV 파일에서 데이터를 가져와서 DB에 INSERT
+```python
+import pymysql
+import csv
+
+conn = pymysql.connect(host='localhost', user='root', password='apmsetup', db='youtube', charset='utf8')
+curs = conn.cursor()
+sql = "insert into user (id, name, region, insdt) values (%s, %s, %s, now())"
+f = open('test.csv', 'r', encoding='utf-8')
+rd = csv.reader(f)
+
+for line in rd:
+    curs.execute(sql, (line[0], line[1], line[2]))
+
+conn.commit()
+conn.close()
+f.close()
+
+```
+
+# DB에서 데이터를 가져와서 CSV 파일에 WRITE
+```python
+import pymysql
+import csv
+
+conn = pymysql.connect(host='localhost', user='root', password='apmsetup', db='youtube', charset='utf8')
+curs = conn.cursor()
+sql = "select * from user"
+f = open('test2_output.csv', 'w', encoding='utf-8', newline='')
+wr = csv.writer(f)
+curs.execute(sql)
+rows = curs.fetchall()
+
+for row in rows:
+    wr.writerow([row[0], row[1], row[2], row[3], row[4]])
+
+conn.commit()
+conn.close()
+f.close()
+
+```
+
