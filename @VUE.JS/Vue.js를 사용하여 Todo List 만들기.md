@@ -32,3 +32,25 @@ Vue.js를 이용하여 Todo List를 만들어 볼 예정이다.
 ## layouts/index.vue
 ![image](https://user-images.githubusercontent.com/102650331/190868682-1853146c-37ec-4a3a-b997-f0666a9150d3.png)
 
+```html
+<template>
+    <div>
+        <todo-header></todo-header>
+        <slot></slot> <!-- 여기에 컨텐츠 영역이 들어감. -->
+        <todo-footer></todo-footer>
+    </div>
+</template>
+ 
+<script>
+import TodoHeader from './TodoHeader.vue'
+import TodoFooter from './TodoFooter.vue'
+ 
+export default {
+    components: { TodoHeader, TodoFooter },
+ 
+}
+</script>
+
+
+```
+
