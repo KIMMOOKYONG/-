@@ -54,3 +54,15 @@ export default {
 
 ```
 
+## views/Todo.vue
+![image](https://user-images.githubusercontent.com/102650331/190869080-f2b1488e-f75f-4ced-8151-22abe23c3161.png)
+
+## router/index.js
+![image](https://user-images.githubusercontent.com/102650331/190869099-2b0f36d4-84f8-4dc5-bbde-fcd94db74232.png)
+
+## assets
+![image](https://user-images.githubusercontent.com/102650331/190869154-bba85e38-e90f-43eb-a883-34dc53fb4b01.png)
+
+
+
+
