@@ -117,3 +117,29 @@ public class GetController {
 
 ![image](https://user-images.githubusercontent.com/102650331/191982568-259229b2-b80f-4f6b-aca4-46a901544274.png)
 
+
+```java
+package com.spring.api.controller;
+
+import org.springframework.web.bind.annotation.*;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/v1/get-api")
+public class GetController {
+    @GetMapping(value = "/request2")
+    public String getRequestParam2(@RequestParam Map<String, String> param) {
+        StringBuilder sb = new StringBuilder();
+        param.entrySet().forEach(map -> {
+            sb.append(map.getKey() + " : " + map.getValue() + "\n");
+        });
+        return sb.toString();
+    }
+}
+
+
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/191983928-b2515f51-d51c-4b6c-8839-3277a6471348.png)
+
