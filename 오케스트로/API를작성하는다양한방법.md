@@ -51,3 +51,24 @@ public class GetController {
 ![image](https://user-images.githubusercontent.com/102650331/191976831-48702479-3c84-49b0-85fc-807b5734916b.png)
 
 
+# @PathVariable을 활용한 GET 메서드 구현
+
+```java
+package com.spring.api.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/get-api")
+public class GetController {
+    @GetMapping(value = "/variable1/{variable}")
+    public String getVariable1(@PathVariable String variable) {
+        return variable;
+    }
+}
+
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/191980617-6f6799ca-47e5-4c4e-b369-959151c82e0a.png)
+
