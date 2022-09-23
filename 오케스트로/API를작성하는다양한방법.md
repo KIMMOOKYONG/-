@@ -90,3 +90,30 @@ public class GetController {
 ```
 
 ![image](https://user-images.githubusercontent.com/102650331/191981210-75568a91-ecfc-406d-b6fb-6dbeb0109d23.png)
+
+# @RequestParam을 활용한 GET 메서드 구현
+
+```java
+package com.spring.api.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/get-api")
+public class GetController {
+    @GetMapping(value = "/request1")
+    public String getRequestParam1(
+            @RequestParam String name,
+            @RequestParam String email,
+            @RequestParam String organization
+    ) {
+        return  name + " " + email + " " + organization;
+    }
+}
+
+
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/191982568-259229b2-b80f-4f6b-aca4-46a901544274.png)
+
