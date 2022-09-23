@@ -143,3 +143,9 @@ public class GetController {
 
 ![image](https://user-images.githubusercontent.com/102650331/191983928-b2515f51-d51c-4b6c-8839-3277a6471348.png)
 
+
+# DTO 객체를 활용한 GET 메서드 구현
+![image](https://user-images.githubusercontent.com/102650331/191984425-ab280fcb-e71e-4cd4-8ca2-e9c4535afc0b.png)
+
+![image](https://user-images.githubusercontent.com/102650331/191986846-7aef3eb3-3e0b-4b97-a039-cde6eaec0038.png)
+
