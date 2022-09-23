@@ -147,5 +147,24 @@ public class GetController {
 # DTO 객체를 활용한 GET 메서드 구현
 ![image](https://user-images.githubusercontent.com/102650331/191984425-ab280fcb-e71e-4cd4-8ca2-e9c4535afc0b.png)
 
+```java
+package com.spring.api.controller;
+
+import com.spring.api.dto.MemberDto;
+import org.springframework.web.bind.annotation.*;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/v1/get-api")
+public class GetController {
+    @GetMapping(value = "/request3")
+    public String getRequestParam3(MemberDto memberDto) {
+        return memberDto.toString();
+    }
+}
+
+
+```
+
 ![image](https://user-images.githubusercontent.com/102650331/191986846-7aef3eb3-3e0b-4b97-a039-cde6eaec0038.png)
 
