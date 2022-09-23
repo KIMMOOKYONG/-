@@ -72,3 +72,21 @@ public class GetController {
 
 ![image](https://user-images.githubusercontent.com/102650331/191980617-6f6799ca-47e5-4c4e-b369-959151c82e0a.png)
 
+```java
+package com.spring.api.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/get-api")
+public class GetController {
+    @GetMapping(value = "/variable2/{variable}")
+    public String getVariable2(@PathVariable("variable") String var) {
+        return var;
+    }
+}
+
+
+```
+
+![image](https://user-images.githubusercontent.com/102650331/191981210-75568a91-ecfc-406d-b6fb-6dbeb0109d23.png)
