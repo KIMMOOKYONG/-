@@ -82,6 +82,8 @@
 
 ![image](https://user-images.githubusercontent.com/102650331/213429594-c2e97eb5-0730-4aff-9149-3890fcb38742.png)
 
+![image](https://user-images.githubusercontent.com/102650331/213432532-0d5b3593-3eba-4645-9704-6bc78b410664.png)
+
 - 물리 서버별 CPU 사용률
 - 물리 서버별 메모리 사용률
 - 물리 서버별 스토리지 사용률
@@ -93,5 +95,7 @@
 
 - 파드 상태, 실행 파드, 파드 라이프 사이클이 표시됩니다.
 - 노드별 CPU/메모리 사용률, 노드별 CPU/메모리 사용률(Top5) 정보가 표시됩니다.
-
+- 파드 상태(Running,Pending, Failed, Succeeded)
+- 파드 상태별로 조회할 수 있는 기능 제공 여부(???)
+- 
 
