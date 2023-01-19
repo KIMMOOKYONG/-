@@ -53,5 +53,5 @@
 
 
 ![image](https://user-images.githubusercontent.com/102650331/213425534-e245ef6e-e07b-4af8-a783-e11bf50c1347.png)
-
+[관리자가 선택한 클러스터 자원 전체 사용현황을 시각화한 화면]
 
