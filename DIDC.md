@@ -98,5 +98,12 @@
 - 노드별 CPU/메모리 사용률, 노드별 CPU/메모리 사용률(Top5) 정보가 표시됩니다.
 - 파드 상태(Running,Pending, Failed, Succeeded)
 - 파드 상태별로 조회할 수 있는 기능 제공 여부(???)
-- 
+
+
+```
+# Pod LifeCycle
+파드는 생성부터 삭제까지의 과정에 생명 주기(LiefCycle)이 있습니다. 파드의 생명 주기는 다음과 같습니다.
+```
+![image](https://user-images.githubusercontent.com/102650331/213438729-15cfce5b-12b6-4c32-b371-28e645298b48.png)
+
 
