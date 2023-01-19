@@ -66,6 +66,7 @@
 ![image](https://user-images.githubusercontent.com/102650331/213425534-e245ef6e-e07b-4af8-a783-e11bf50c1347.png)
 - 관리자가 선택한 클러스터 자원 전체 사용현황을 시각화한 화면
 
+#### 플랫폼 인프라
 ![image](https://user-images.githubusercontent.com/102650331/213426752-41d83c72-3068-4923-8cc5-3e45979b3440.png)
 - 프로젝트별 남은 CPU, 메모리, 스토리지, 인스턴스 할당량이 표시됩니다.(쿼트, 리소스풀)
 - 지난 주 대비 프로젝트 별 CPU Core, 메모리, 스토리지, 인스턴스 사용량이 표시됩니다.(트렌드 화면)
@@ -86,4 +87,7 @@
 - 물리 서버별 스토리지 사용률
 - 물리 서버별 시스템 로그 정보
 - 물리 서버별 네트워크 사용량
+
+#### 플랫폼 Kubernets
+![image](https://user-images.githubusercontent.com/102650331/213430408-93e899e8-232c-4eda-b50b-85141ace1773.png)
 
