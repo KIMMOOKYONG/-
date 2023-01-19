@@ -89,6 +89,7 @@
 - 물리 서버별 스토리지 사용률
 - 물리 서버별 시스템 로그 정보
 - 물리 서버별 네트워크 사용량
+- 이슈가 발생한 물리 서버에는 붉은색 아이콘으로 표시가 됨.
 
 #### 플랫폼 Kubernets
 ![image](https://user-images.githubusercontent.com/102650331/213430408-93e899e8-232c-4eda-b50b-85141ace1773.png)
