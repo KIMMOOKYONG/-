@@ -91,3 +91,7 @@
 #### 플랫폼 Kubernets
 ![image](https://user-images.githubusercontent.com/102650331/213430408-93e899e8-232c-4eda-b50b-85141ace1773.png)
 
+- 파드 상태, 실행 파드, 파드 라이프 사이클이 표시됩니다.
+- 노드별 CPU/메모리 사용률, 노드별 CPU/메모리 사용률(Top5) 정보가 표시됩니다.
+
+
