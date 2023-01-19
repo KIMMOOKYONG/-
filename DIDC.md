@@ -50,3 +50,8 @@
 빌드 배포 관리
 알림(현황관리에 있는 알림 기능을 별도의 메뉴로 분리)
 - 알림 발송 이력화면이 없음
+
+
+![image](https://user-images.githubusercontent.com/102650331/213425534-e245ef6e-e07b-4af8-a783-e11bf50c1347.png)
+
+
