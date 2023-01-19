@@ -78,9 +78,12 @@
 - (개선 사항) VM OS 및 설치 소프트웨어 정보가 같이 표시되면 좋겠다.
 
 ![image](https://user-images.githubusercontent.com/102650331/213429165-778eb8a2-beb1-451e-b5c9-9af8c82edc85.png)
+
+![image](https://user-images.githubusercontent.com/102650331/213429594-c2e97eb5-0730-4aff-9149-3890fcb38742.png)
+
 - 물리 서버별 CPU 사용률
 - 물리 서버별 메모리 사용률
 - 물리 서버별 스토리지 사용률
 - 물리 서버별 시스템 로그 정보
-
+- 물리 서버별 네트워크 사용량
 
